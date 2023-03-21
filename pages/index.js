@@ -24,8 +24,8 @@ export default function Home() {
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>
       <main className='mx-[6.875rem]'>
-      <Navbar />
       <LayoutGradientBg>
+      <Navbar />
       <Hero/>
       <Banner/>
       </LayoutGradientBg>
