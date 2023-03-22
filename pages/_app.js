@@ -4,7 +4,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 
 // If loading a variable font, you don't need to specify the font weight
 const plexSans = IBM_Plex_Sans({ 
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700', '300'],
   subsets: ["latin"] 
 });
 

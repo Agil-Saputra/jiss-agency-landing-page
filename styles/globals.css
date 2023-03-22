@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* create most uses classes */
 .flex-center {
     @apply flex items-center
+}
+.smooth {
+    @apply transition-all duration-300 ease-in-out
 }
 
 /* class for typography */
@@ -11,13 +15,25 @@
     @apply text-[3.25rem] font-[600]
 }
 
+.h2 {
+    @apply text-[3rem] font-[600]
+}
+
 .p {
     @apply text-[22px] text-secondary
 }
 
 /* class for gradient background*/
+
 .gradient-bg::before {
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(50,175,255,0.013064600840336116) 0%, rgba(114,200,255,0.5) 0%, rgba(126,205,255,0.3) 0%, rgba(124,204,255,0.3) 0%, rgba(255,255,255,0) 60%);    
-    @apply w-full lg:left-[-400px] left-0 top-0 absolute h-[80%] content-[''] -z-10
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(50,175,255,0.013064600840336116) 0%, rgba(114,200,255,0.5) 0%, rgba(126,205,255,0.3) 0%, rgba(124,204,255,0.3) 0%, rgba(255,255,255,0) 55%);    
+    @apply w-full lg:left-[-450px] left-0 top-0 absolute h-full content-[''] -z-10
+} 
+.gradient-bg::after {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(50,175,255,0.013064600840336116) 0%, rgba(114,200,255,0.5) 0%, rgba(126,205,255,0.3) 0%, rgba(124,204,255,0.3) 0%, rgba(255,255,255,0) 55%);    
+    @apply w-full  right-0 bottom-[-77rem] absolute h-full content-[''] -z-10 
 } 
 
+.list-primary::before {
+    @apply content-[''] rounded-[100px] bg-primary inline-block w-[1rem] h-4 mr-[0.5rem]
+}
