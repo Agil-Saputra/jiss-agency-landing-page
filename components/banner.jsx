@@ -6,7 +6,9 @@ export default function banner() {
     <Image 
         priority={true}
         src={bannerImage}
-        width="100%" height="auto" 
+        width="100%" 
+        alt="screen demo image"
+        height="auto" 
     />
 
   )

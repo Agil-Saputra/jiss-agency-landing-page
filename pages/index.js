@@ -5,7 +5,7 @@ import Navbar from '@/components/navigation/navbar'
 import Hero from '@/components/hero'
 import Services from '@/components/services/services'
 import Banner from '@/components/banner'
-import Doctors from '@/components/doctors'
+import Doctors from '@/components/doctors/doctors'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 
@@ -23,7 +23,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>
-      <main className='mx-[6.875rem]'>
+      <main className='md:mx-[6.875rem] mx-4'>
       <LayoutGradientBg>
       <Navbar />
       <Hero/>
