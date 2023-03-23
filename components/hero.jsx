@@ -10,7 +10,7 @@ export default function hero() {
 healthy lifestyle and get fast medical services to treat your health.</p>
       <div className="flex-center gap-6 max-sm:flex-col w-full justify-center">
         <Button1 title="Get Started" href="#"/>
-        <Button2 title="Free Consultation" href="#"/>
+        <Button2 title="Free Consultation" href="#" style="border-primary"/>
       </div>
     </section>
   )

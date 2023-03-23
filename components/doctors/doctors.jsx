@@ -15,7 +15,7 @@ export default function doctors() {
   ];
   return (
     <section>
-      <DoctorLayout>
+      <DoctorLayout style="max-xl:flex-col">
         <Image
           src={rian}
           width="100%"
@@ -35,13 +35,13 @@ export default function doctors() {
           </p>
           <div className="grid grid-cols-2 gap-6 max-md:gap-2">
             {lists.map((list) => (
-              <li className="list-primary list-none text-[20px]">{list}</li>
+              <li key={list} className="list-primary list-none text-[20px]">{list}</li>
             ))}
           </div>
         </div>
       </DoctorLayout>
 
-      <DoctorLayout style="mt-24">
+      <DoctorLayout style="mt-24 max-xl:flex-col-reverse">
         <div>
           <h3 className="h2">
             Complete health solutions in the world and download the application
@@ -51,7 +51,7 @@ export default function doctors() {
             Worlds first health app with 50 million+ downloads by users and get
             the best health app reviews.
           </p>
-          <div className="flex-center gap-8">
+          <div className="flex-center gap-8 max-[440px]:flex-col">
             <Store platform={playStore} rating={4.8}/>
             <Store platform={appStore} rating={4.6}/>
           </div>
