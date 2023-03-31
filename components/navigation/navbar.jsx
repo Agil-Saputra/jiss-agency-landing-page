@@ -10,7 +10,29 @@ import { GrClose } from "react-icons/gr"
 
 export default function Navbar() {
 const [showNav, setShowNav] = useState(false)
-const menus = ["Home", "About us", "Our services", "Find doctors", "Contact"] 
+
+const menus = [
+  {
+    menu : "Home",
+    path : "#home",
+  },
+  {
+    menu : "About Us",
+    path : "#about",
+  },
+  {
+    menu : "Our services",
+    path : "#ourservices",
+  },
+  {
+    menu : "Find doctors",
+    path : "#doctors",
+  },
+  {
+    menu : "Contact",
+    path : "#contact",
+  },
+] 
 
 const setIcon = {
   size: 25,
@@ -40,7 +62,7 @@ function handleToggle() {
     : "max-lg:-translate-x-full") + " smooth flex gap-8 max-xl:gap-4 items-center max-lg:fixed max-lg:flex-col top-0 right-0 max-lg:z-10 max-lg:w-full max-lg:h-full max-lg:justify-center"} 
     onClick={handleToggle}>
     
-    {menus.map((menu, i) => <Link href="#" className="hover:text-slate-400 smooth text-[18px] font-light" key={i}>{menu}</Link>)}
+    {menus.map((item, i) => <Link href={item.path} scroll={false} className="hover:text-slate-400 smooth text-[18px] font-light" key={i}>{item.menu}</Link>)}
     <Login style={"lg:hidden items-center gap-8 flex"}/>
     </nav>
     

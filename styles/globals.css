@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* adding smooth scroll behavior */
+*, html, body{
+    scroll-behavior: smooth;
+}
+
 /* create most uses classes */
 .flex-center {
     @apply flex items-center
@@ -12,15 +17,15 @@
 
 /* class for typography */
 .h1 {
-    @apply text-[3.25rem] font-[600]
+    @apply md:text-[3.25rem] font-[600] text-4xl sm:leading-[4rem] leading-[2.7rem]
 }
 
 .h2 {
-    @apply text-[3rem] font-[600]
+    @apply md:text-[3rem] font-[600] text-3xl  sm:leading-[4rem]
 }
 
 .p {
-    @apply text-[22px] text-secondary
+    @apply md:text-[22px] text-secondary text-[15px]
 }
 
 /* class for gradient background*/
@@ -34,6 +39,7 @@
     @apply w-full  right-0 bottom-[-77rem] absolute h-full content-[''] -z-10 
 } 
 
+/* class for custom list bullet  */
 .list-primary::before {
     @apply content-[''] rounded-[100px] bg-primary inline-block w-[1rem] h-4 mr-[0.5rem]
 }

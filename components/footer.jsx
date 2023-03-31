@@ -38,7 +38,9 @@ export default function footer() {
          </a>
         ))}
       </div>
-      <p className="text-secondary font-[600] text-[26px] hover:text-black smooth">Back to Home</p>
+      <a href="#home">
+      <p className="text-secondary font-[600] text-[26px] hover:text-black smooth cursor-pointer" >Back to Home</p>
+      </a>
     </footer>
   );
 }

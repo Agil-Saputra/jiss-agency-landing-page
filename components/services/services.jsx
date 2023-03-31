@@ -26,7 +26,7 @@ export default function services() {
     },
   ];
   return (
-    <section className="mb-36 mt-8">
+    <section id="ourservices" className="md:mb-36 mb-10 mt-8">
       <div className="flex-center gap-10 my-10 justify-between max-md:flex-col max-md:gap-4">
         <h2 className="h2">All of our services to suit your needs</h2>
         <p className="p">
@@ -34,7 +34,7 @@ export default function services() {
           services that are frequently used
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-4 mt-[3.75rem] grid-cols-1 max-md:px-8">
+      <div className="grid lg:grid-cols-3 gap-4 mt-[3.75rem] grid-cols-1 max-md:px-2">
         {cards.map((card, i) => (
           <Card key={i} icon={card.source} title={card.title} desc={card.desc} bgColor={card.color}/>
         ))}

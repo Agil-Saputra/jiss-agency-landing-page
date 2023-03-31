@@ -2,7 +2,7 @@ import Button2 from "./ui/button2";
 
 export default function contact() {
   return (
-    <section className="bg-primary rounded-[2rem] py-10 text-center mt-32 px-4 placeholder flex-center flex-col">
+    <section id="contact" className="bg-primary rounded-[1rem] py-10 sm:text-center mt-32 px-4 placeholder flex-center flex-col">
       <h2 className="h2 text-white max-w-[26ch]">
         Time to change your lifestyle to find health services. join us for any
         updates on medicare

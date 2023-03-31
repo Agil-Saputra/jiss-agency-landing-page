@@ -3,7 +3,7 @@ import Button2 from "./ui/button2"
 
 export default function hero() {
   return (
-    <section className="mb-[8.5625rem] mt-24 text-center flex flex-col items-center ">
+    <section id="home" className="md:mb-[8.5625rem] mb-10 mt-24 md:text-center flex flex-col items-center ">
       <h1 className='h1 md:px-10 '>Your health is our top priority and the most
  complete health solutions in your hands</h1>
       <p className="my-10 p">Remote health monitoring platform to create a bright smile,<br/>
