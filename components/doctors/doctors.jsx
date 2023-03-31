@@ -14,7 +14,7 @@ export default function doctors() {
     "Health insurance service",
   ];
   return (
-    <section>
+    <section id="doctors">
       <DoctorLayout style="max-xl:flex-col">
         <Image
           src={rian}
@@ -33,9 +33,9 @@ export default function doctors() {
             Best medicare service that our loyal customers often use for remote
             health monitoring.
           </p>
-          <div className="grid grid-cols-2 gap-6 max-md:gap-2">
+          <div className="grid grid-cols-2 gap-6">
             {lists.map((list) => (
-              <li key={list} className="list-primary list-none text-[20px]">{list}</li>
+              <li key={list} className="list-primary list-none md:text-[20px]">{list}</li>
             ))}
           </div>
         </div>
@@ -65,8 +65,6 @@ export default function doctors() {
           placeholder
         />
       </DoctorLayout>
-
-      <div></div>
     </section>
   );
 }
