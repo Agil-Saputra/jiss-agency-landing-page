@@ -1,38 +1,45 @@
 import Card from "./card";
 
-import icon1 from "../assets/icons/appointment.webp";
-import icon2 from "../assets/icons/pharmacy.webp";
-import icon3 from "../assets/icons/consultation.webp";
+import digital from "../assets/icons/digital.png";
+import direct from "../assets/icons/direct.png";
+import develop from "../assets/icons/develop.png";
 
 export default function services() {
   const cards = [
     {
-      source: icon1,
+      source: digital,
       title: "Digital Marketing",
-      desc: "Schedule your appointment with your health consultation with the best doctors in medicare",
+      desc: "Kami menyediakan strategi dan layanan digital marketing yang terdepan dalam memaksimalkan kehadiran online klien kami, pemasaran media sosial, kampanye iklan online, dan pengoptimalan konversi, kami membantu klien kami mencapai visibilitas yang lebih tinggi di platform digital, dan menghasilkan lead berkualitas.",
     },
     {
-      source: icon2,
+      source: direct,
       title: "Direct Marketing",
-      desc: "We always provide complete and trusted health solutions to meet your health needs",
+      desc: "Kami mengembangkan strategi direct marketing yang efektif untuk membantu klien kami menjangkau dan berinteraksi langsung dengan target pasar mereka. Melalui periklanan cetak, promosi penjualan, kegiatan pemasaran langsung, dan pemanfaatan data konsumen yang akurat, kami membantu klien kami mencapai hasil yang lebih baik dalam hal penjualan, pengenalan merek, dan retensi pelanggan.",
     },
     {
-      source: icon3,
+      source: develop,
       title: "Develop Marketing",
-      desc: "Consult your health condition so that it can behandled immediately by experienced only in Medicare",
+      desc: "Kami juga menawarkan layanan develop marketing yang bertujuan untuk membantu klien kami mengembangkan produk dan layanan mereka. Dengan menggunakan pendekatan riset pasar, analisis persaingan, dan pemahaman mendalam tentang kebutuhan pelanggan, kami membantu klien kami merancang strategi pengembangan produk yang efektif dan meluncurkan produk yang sukses ke pasar",
     },
   ];
   return (
     <section id="layanan" className="md:mb-36 mb-10 mt-8">
-      <div className="flex-center gap-10 my-10 justify-between max-md:flex-col max-md:gap-4">
+      <div className="my-10">
         <h2 className="h2">Semua Layanan Kami</h2>
         <p className="p">
-          Jasa Inti Solusi Sukses mempunyai banyak layanan untuk kebutuhan mu, Berikut 3 Layanan yang paling sering digunakan :
+          Jasa Inti Solusi Sukses mempunyai banyak layanan untuk kebutuhan mu,
+          Berikut 3 Layanan yang paling sering digunakan :
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-4 mt-[3.75rem] grid-cols-1 max-md:px-2">
+      <div className="flex flex-wrap gap-4 mt-[3.75rem]  max-md:px-2">
         {cards.map((card, i) => (
-          <Card key={i} icon={card.source} title={card.title} desc={card.desc} bgColor={card.color}/>
+          <Card
+            key={i}
+            icon={card.source}
+            title={card.title}
+            desc={card.desc}
+            bgColor={card.color}
+          />
         ))}
       </div>
     </section>

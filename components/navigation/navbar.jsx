@@ -14,10 +14,6 @@ const menus = [
     path : "#home",
   },
   {
-    menu : "Tentang Kami",
-    path : "#about",
-  },
-  {
     menu : "Layanan Kami",
     path : "#layanan",
   },

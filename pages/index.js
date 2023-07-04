@@ -7,8 +7,7 @@ import Services from '@/components/services/services'
 import Contact from '@/components/contact/contact'
 import Footer from '@/components/footer/footer'
 import Information from '@/components/information/information'
-
-
+import Banner from '@/components/information/banner'
 
 
 export default function Home() {
@@ -25,6 +24,7 @@ export default function Home() {
       <Hero/>
       <Services/>
 	  <Information/>
+	  <Banner/>
       <Contact/>
       <Footer/>
       </main>

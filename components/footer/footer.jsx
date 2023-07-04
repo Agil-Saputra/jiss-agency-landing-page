@@ -22,7 +22,7 @@ export default function footer() {
     },
   ];
   return (
-    <footer className="flex-center justify-between my-14 max-lg:flex-col max-lg:items-start max-lg: gap-10">
+    <footer className="flex-center justify-between my-6 max-lg:flex-col max-lg:items-start max-lg: gap-10">
       <div className="flex items-center gap-2">
         <Image
           src={logo}

@@ -26,7 +26,7 @@ export default function hero() {
 		</p>
 		<div className="flex-center gap-6 max-sm:flex-col w-full justify-center">
 		  <Button1 title="Lihat Produk" href="#layanan" />
-		  <Button2 title="Registrasi" href="#" style="border-primary" />
+		  <Button2 title="Company Profile " href="#" style="border-primary" />
 		</div>
 	  </div>
     </section>
