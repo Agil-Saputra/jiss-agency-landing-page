@@ -19,7 +19,7 @@ export default function hero() {
 		  Kami adalah sebuah marketing agency yang mempunyai misi untuk
 		  mendengarkan kebutuhan dan tujuan klien kami. Kami melayani dengan penuh
 		  dedikasi, memberikan solusi pemasaran yang inovatif dan efektif. Motto
-		  kami adalah <span className="font-bold text-primary ">"Bergabung Berkembang Bersama"</span>, kami percaya bahwa dengan
+		  kami adalah <span className="font-bold text-primary "> &ldquo;Bergabung Berkembang Bersama&ldquo;</span>, kami percaya bahwa dengan
 		  bergabung dan bekerja sama, kita dapat saling membantu dalam mencapai
 		  kesuksesan. Kami membuat strategi yang sesuai dengan visi dan misi klien
 		  kami, dan berupaya memberikan hasil yang memuaskan.
