@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-
-import logo from "../assets/Logo.webp"
-import Login from "./login"
-
+import jissLogo from "../assets/logo.svg"
 import { FaBars } from "react-icons/fa"
 import { GrClose } from "react-icons/gr"
 
@@ -13,23 +10,23 @@ const [showNav, setShowNav] = useState(false)
 
 const menus = [
   {
-    menu : "Home",
+    menu : "Beranda",
     path : "#home",
   },
   {
-    menu : "About Us",
+    menu : "Tentang Kami",
     path : "#about",
   },
   {
-    menu : "Our services",
-    path : "#ourservices",
+    menu : "Layanan Kami",
+    path : "#layanan",
   },
   {
-    menu : "Find doctors",
-    path : "#doctors",
+    menu : "Pusat Informasi",
+    path : "#pusat-informasi",
   },
   {
-    menu : "Contact",
+    menu : "Kontak",
     path : "#contact",
   },
 ] 
@@ -49,26 +46,27 @@ function handleToggle() {
 }, [showNav]) 
 
   return (
-    <header className="flex-center gap-8 justify-between my-10">
-    <Image
-        src={logo}
-        width={163}
-        height={44}
-        alt="Mediacare Logo"
-        priority={true}
-    />
+    <header className="flex-center gap-8 justify-between my-5">
+   <div className="flex items-center gap-2">
+	 <Image
+		 src={jissLogo}
+		 width={70}
+		 height={70}
+		 alt="Mediacare Logo"
+		 priority={true}
+	 />
+	 <p className="text-[2.5rem] uppercase">Jiss</p>
+   </div>
 
-    <nav className={(showNav ? "translate-x-0 max-lg:bg-primary" 
-    : "max-lg:-translate-x-full") + " smooth flex gap-8 max-xl:gap-4 items-center max-lg:fixed max-lg:flex-col top-0 right-0 max-lg:z-10 max-lg:w-full max-lg:h-full max-lg:justify-center"} 
+    <nav className={(showNav ? "translate-x-0 max-lg:bg-primary bg-opacity-50" 
+    : "max-lg:translate-x-full") + " smooth flex gap-8 max-xl:gap-4 items-center max-lg:fixed max-lg:flex-col top-0 right-0 max-lg:z-10 max-lg:w-[60%] max-lg:h-full max-lg:pt-20"} 
     onClick={handleToggle}>
     
-    {menus.map((item, i) => <Link href={item.path} scroll={false} className="hover:text-slate-400 smooth text-[18px] font-light" key={i}>{item.menu}</Link>)}
-    <Login style={"lg:hidden items-center gap-8 flex"}/>
+    {menus.map((item, i) => <Link href={item.path} scroll={false} className="hover:text-slate-400 smooth text-[18px] font-light  max-lg:w-full max-lg:px-6 max-lg:py-2" key={i}>{item.menu}</Link>)}
     </nav>
     
 
-    <div>
-    <Login style={"lg:flex items-center gap-8 hidden"}/>
+    <div className="lg:hidden items-center gap-8 block">
     {showNav ? <GrClose {...setIcon} /> : <FaBars {...setIcon} />}
     </div>
     </header>
