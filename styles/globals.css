@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* adding smooth scroll behavior */
-*, html, body{
-    scroll-behavior: smooth;
+body {
+	@apply md:mx-[8.6875rem] mx-4
 }
 
 /* create most uses classes */

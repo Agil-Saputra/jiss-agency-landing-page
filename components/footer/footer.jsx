@@ -1,24 +1,26 @@
 import Image from "next/image";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import logo from "../assets/logo.svg";
+import instagram from '../assets/icons/socmed/instagram.svg'
+import linkedin from '../assets/icons/socmed/linkedin.svg'
+import facebook from '../assets/icons/socmed/facebook.svg'
 
 export default function footer() {
   const links = [
     {
       platform: "Instagram",
-      link: "#",
-    },
-    {
-      platform: "Twitter",
-      link: "#",
+      link: "https://www.instagram.com/jiss_agency/",
+	  icon : instagram
     },
     {
       platform: "Facebook",
-      link: "#",
+      link: "https://web.facebook.com/profile.php?id=100092748260894",
+	  icon : facebook
     },
     {
       platform: "LinkedIn",
-      link: "#",
+      link: "https://www.linkedin.com/company/jiss-agency",
+	  icon: linkedin
     },
   ];
   return (
@@ -40,10 +42,12 @@ export default function footer() {
             href={link.link}
             className="font-[600] text-[20px] flex-center gap-2"
           >
-            <TfiArrowCircleRight
-              size={30}
-              className="hover:-rotate-45 smooth"
-            />
+           <Image 
+			width={40}
+			height={40}
+			src={link.icon}
+			alt="icon"
+		   />  
             {link.platform}
           </a>
         ))}

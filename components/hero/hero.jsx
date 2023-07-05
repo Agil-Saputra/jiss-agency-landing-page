@@ -8,7 +8,7 @@ export default function hero() {
   return (
     <section
       id="home"
-      className="md:mb-[5.5625rem] mb-4 mt-10 md:text-center grid place-items-center lg:min-h-[70vh]"
+      className="md:mb-[5.5625rem] mb-4 mt-0 md:text-center grid place-items-center lg:min-h-[70vh]"
     >
 	<div>
 

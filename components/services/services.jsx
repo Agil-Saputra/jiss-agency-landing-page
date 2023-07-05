@@ -4,7 +4,7 @@ import digital from "../assets/icons/digital.png";
 import direct from "../assets/icons/direct.png";
 import develop from "../assets/icons/develop.png";
 
-export default function services() {
+export default function services({ data }) {
   const cards = [
     {
       source: digital,
@@ -32,15 +32,17 @@ export default function services() {
         </p>
       </div>
       <div className="flex flex-wrap gap-4 mt-[3.75rem]  max-md:px-2">
-        {cards.map((card, i) => (
-          <Card
-            key={i}
-            icon={card.source}
-            title={card.title}
-            desc={card.desc}
-            bgColor={card.color}
-          />
-        ))}
+        {data.map((layanan, i) => {
+			const {judulLayanan, deskripsiLayanan, ilustrasiLayanan} = layanan.fields
+          return (
+            <Card
+              key={i}
+              icon={'https:' + ilustrasiLayanan.fields.file.url}
+              title={judulLayanan}
+              desc={deskripsiLayanan}
+            />
+          );
+        })}
       </div>
     </section>
   );

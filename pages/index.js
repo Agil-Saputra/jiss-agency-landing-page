@@ -1,16 +1,28 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 // import all components
-import Navbar from '@/components/navigation/navbar'
-import Hero from '@/components/hero/hero'
-import Services from '@/components/services/services'
-import Contact from '@/components/contact/contact'
-import Footer from '@/components/footer/footer'
-import Information from '@/components/information/information'
-import Banner from '@/components/information/banner'
+import Navbar from "@/layout/navigation/navbar";
+import Hero from "@/components/hero/hero";
+import Services from "@/components/services/services";
+import Contact from "@/components/contact/contact";
+import Footer from "@/components/footer/footer";
+import News from "@/components/news/news";
 
+import { client } from "@/contentful/client";
 
-export default function Home() {
+// fetching data from Contentful CMS
+export async function getStaticProps(type) {
+  const layanan = await client.getEntries({ content_type: "layanan" })
+
+  // passing props for each content-model response
+  return {
+    props: {
+      layanan,
+    },
+  };
+}
+
+export default function Home({layanan}) {
   return (
     <>
       <Head>
@@ -19,15 +31,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>
-      <main className='md:mx-[8.6875rem] mx-4'>
-      <Navbar />
-      <Hero/>
-      <Services/>
-	  <Information/>
-	  <Banner/>
-      <Contact/>
-      <Footer/>
-      </main>
+      <Navbar>
+        <main>
+          <Hero />
+          <Services data={layanan.items}/>
+          <News />
+          <Contact />
+          <Footer />
+        </main>
+      </Navbar>
     </>
-  )
+  );
 }
