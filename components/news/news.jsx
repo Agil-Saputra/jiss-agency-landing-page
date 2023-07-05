@@ -7,13 +7,13 @@ export default function News() {
   return (
     <div>
       <h2 className="h2 mb-6">Berita</h2>
-      <a
+      <Link
         href="/mitra/smsb"
         className="md:text-[32px] text-primary text-[15px] underline"
       >
         PUSAT PENDIDIKAN & LATIHAN DASAR SATUAN PENGAMANAN PT. SUMATERA MANDIRI
         SUKSES BERSAMA
-      </a>
+      </Link>
       <div className="mt-4">
 		<div className="lg:float-right  lg:ml-4 max-lg:my-4 max-md:w-full">
 		  <Image
