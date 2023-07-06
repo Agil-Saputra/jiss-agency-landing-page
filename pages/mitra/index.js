@@ -1,9 +1,24 @@
 import React from "react";
 import Navbar from "@/layout/navigation/navbar";
-import smsb from "../../components/assets/smsb.svg"
+import smsb from "../../components/assets/smsb.svg";
 import Image from "next/image";
 import Link from "next/link";
-export default function index() {
+
+import { client } from "@/contentful/client";
+
+// fetching data from Contentful CMS
+export async function getStaticProps(type) {
+  const mitra = await client.getEntries({ content_type: "mitra" });
+  // passing props for each content-model response
+  return {
+    props: {
+      mitra,
+    },
+  };
+}
+
+export default function index({ mitra }) {
+	console.log(mitra)
   return (
     <Navbar>
       <p className="p">
@@ -13,16 +28,18 @@ export default function index() {
         kesuksesan bisnis mereka.
       </p>
       <h2 className="h2 mt-5 mb-4">Mitra Kami</h2>
-      <Link href='/mitra/smsb' className="grid place-items-center border-2 max-lg:w-full w-fit p-2 rounded-lg cursor-pointer hover:bg-slate-200">
-	  <Image 
-		src={smsb}
-		alt='smsb'
-		width={200}
-		height={200}
-	  />
-	  <p className="capitalize p">PT sumatra mandiri 
-        sukses bersama</p>
-	  </Link>
+      {mitra.items.map((item) => {
+		const {slug, judul} = item.fields
+        return (
+            <Link
+              href={`/mitra/${slug}`}
+              className="grid place-items-center border-2 max-lg:w-full w-fit p-2 rounded-lg cursor-pointer hover:bg-slate-200"
+            >
+              <Image src={smsb} alt="smsb" width={200} height={200} />
+              <p className="capitalize p">{judul}</p>
+            </Link>
+        );
+      })}
     </Navbar>
   );
 }

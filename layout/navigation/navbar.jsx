@@ -18,6 +18,10 @@ export default function Navbar({ children }) {
       path: "/#layanan",
     },
     {
+      menu: "Berita",
+      path: "/#berita",
+    },
+    {
       menu: "Company Profile",
       path: "/company-profile",
     },
@@ -30,6 +34,10 @@ export default function Navbar({ children }) {
       path: "/struktur-organisasi",
     },
     {
+      menu: "JISS Tactical",
+      path: "/jiss-tactical",
+    },
+    {
       menu: "Kontak",
       path: "/#contact",
     },
@@ -37,7 +45,7 @@ export default function Navbar({ children }) {
 
   const setIcon = {
     size: 25,
-    className: "lg:hidden z-20 relative",
+    className: "mxl:hidden z-20 relative",
     onClick: handleToggle,
   };
 
@@ -47,7 +55,7 @@ export default function Navbar({ children }) {
 
   useEffect(() => {
     document.body.classList = showNav
-      ? "max-lg:overflow-hidden"
+      ? "max-mxl:overflow-hidden"
       : "overflow-unset";
   }, [showNav]);
 
@@ -68,9 +76,9 @@ export default function Navbar({ children }) {
         <nav
           className={
             (showNav
-              ? "translate-x-0 max-lg:bg-primary bg-opacity-50"
-              : "max-lg:translate-x-full") +
-            " smooth flex gap-8 max-xl:gap-4 items-center max-lg:fixed max-lg:flex-col top-0 right-0 max-lg:z-10 max-lg:w-[60%] max-lg:h-full max-lg:pt-20"
+              ? "translate-x-0 max-mxl:bg-primary bg-opacity-50"
+              : "max-mxl:translate-x-full") +
+            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-mxl:h-full max-mxl:pt-20"
           }
           onClick={handleToggle}
         >
@@ -86,7 +94,7 @@ export default function Navbar({ children }) {
           ))}
         </nav>
 
-        <div className="lg:hidden items-center gap-8 block">
+        <div className="mxl:hidden items-center gap-8 block">
           {showNav ? <GrClose {...setIcon} /> : <FaBars {...setIcon} />}
         </div>
       </header>

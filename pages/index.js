@@ -13,16 +13,18 @@ import { client } from "@/contentful/client";
 // fetching data from Contentful CMS
 export async function getStaticProps(type) {
   const layanan = await client.getEntries({ content_type: "layanan" })
-
+  const mitra = await client.getEntries({content_type : "mitra"})
   // passing props for each content-model response
   return {
     props: {
       layanan,
+	  mitra
     },
   };
 }
 
-export default function Home({layanan}) {
+export default function Home({layanan, mitra}) {
+
   return (
     <>
       <Head>
@@ -35,7 +37,7 @@ export default function Home({layanan}) {
         <main>
           <Hero />
           <Services data={layanan.items}/>
-          <News />
+          <News data={mitra.items}/>
           <Contact />
           <Footer />
         </main>

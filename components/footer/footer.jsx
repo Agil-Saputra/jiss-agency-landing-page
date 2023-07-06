@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { TfiArrowCircleRight } from "react-icons/tfi";
 import logo from "../assets/logo.svg";
 import instagram from '../assets/icons/socmed/instagram.svg'
 import linkedin from '../assets/icons/socmed/linkedin.svg'
