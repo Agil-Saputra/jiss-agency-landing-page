@@ -32,6 +32,7 @@ export default function index({ mitra }) {
 		const {slug, judul} = item.fields
         return (
             <Link
+			key={slug}
               href={`/mitra/${slug}`}
               className="grid place-items-center border-2 max-lg:w-full w-fit p-2 rounded-lg cursor-pointer hover:bg-slate-200"
             >
