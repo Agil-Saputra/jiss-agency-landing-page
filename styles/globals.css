@@ -6,6 +6,10 @@ body {
 	@apply md:mx-[8.6875rem] mx-4
 }
 
+ canvas {
+	@apply w-full h-full object-contain border-2 my-1 !important 
+}
+
 /* create most uses classes */
 .flex-center {
     @apply flex items-center

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "@/layout/navigation/navbar";
 import { client } from "@/contentful/client";
+import AllPages from "@/components/pdf/all-pages";
 
 export async function getStaticPaths() {
   const product = await client.getEntries({
@@ -111,12 +112,7 @@ const Mitra = ({ mitra }) => {
                 </a>
               ) : null}
               {fileRefrensi ? (
-                <iframe
-                  src={`https:${fileRefrensi.fields.file.url}`}
-                  className="h-screen w-full"
-                >
-                  Info Lebih lanjut Klik Disini
-                </iframe>
+                <AllPages pdf={fileRefrensi.fields.file.url}/>
               ) : null}
             </div>
           );

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/layout/navigation/navbar";
 import { client } from "@/contentful/client";
+import AllPagesPDF from "@/components/pdf/all-pages";
 
 // fetching data from Contentful CMS
 export async function getStaticProps(type) {
-  const redaksi = await client.getEntries({ content_type: "redaksi" })
+  const redaksi = await client.getEntries({ content_type: "redaksi" });
 
   return {
     props: {
@@ -13,14 +14,12 @@ export async function getStaticProps(type) {
   };
 }
 
-export default function companyProfile({redaksi}) {
-	const pdfURl = redaksi.items[0].fields.companyProfile.fields.file.url
+export default function companyProfile({ redaksi }) {
+	const pdfURl = redaksi.items[0].fields.companyProfile.fields.file.url;
   return (
     <Navbar>
-	<h2 className="h2 mb-6">Our Company Profile</h2>
-	{/* <iframe className="w-full h-screen" src={'https:' + pdfURl}></iframe> */}
-	<iframe src={'https:' + pdfURl} className="w-full h-screen"
- type="application/pdf"></iframe>
+      <h2 className="h2 mb-6">Our Company Profile</h2>
+     <AllPagesPDF pdf={pdfURl}/>
     </Navbar>
   );
 }
