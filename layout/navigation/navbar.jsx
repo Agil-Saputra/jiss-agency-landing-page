@@ -30,10 +30,6 @@ export default function Navbar({ children }) {
       path: "/mitra",
     },
     {
-      menu: "Struktur Organisasi",
-      path: "/struktur-organisasi",
-    },
-    {
       menu: "JISS Tactical",
       path: "/jiss-tactical",
     },

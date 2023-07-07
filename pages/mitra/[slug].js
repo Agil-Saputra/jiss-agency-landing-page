@@ -34,7 +34,6 @@ export async function getStaticProps({ params }) {
 
 const Mitra = ({ mitra }) => {
 	const { judulProduk, gambarIlustrasi, deskripsi, brosur, infoDetail, welcomeText, infoPentingRefrensi } = mitra.fields;
-	console.log(infoPentingRefrensi);
 
   return (
     <Navbar>  
