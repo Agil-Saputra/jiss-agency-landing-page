@@ -43,8 +43,6 @@ const Mitra = ({ mitra }) => {
     infoPentingRefrensi,
     formulir,
   } = mitra.fields;
-
-  console.log(formulir.fields.file.url);
   return (
     <Navbar>
       <h2 className="h2 mb-6">{welcomeText}</h2>

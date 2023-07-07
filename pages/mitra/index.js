@@ -18,7 +18,6 @@ export async function getStaticProps(type) {
 }
 
 export default function index({ mitra }) {
-	console.log(mitra)
   return (
     <Navbar>
       <p className="p">

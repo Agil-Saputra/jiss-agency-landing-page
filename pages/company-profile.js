@@ -19,8 +19,8 @@ export default function companyProfile({redaksi}) {
     <Navbar>
 	<h2 className="h2 mb-6">Our Company Profile</h2>
 	{/* <iframe className="w-full h-screen" src={'https:' + pdfURl}></iframe> */}
-	<embed src={'https:' + pdfURl} className="w-full h-screen"
- type="application/pdf"></embed>
+	<iframe src={'https:' + pdfURl} className="w-full h-screen"
+ type="application/pdf"></iframe>
     </Navbar>
   );
 }
