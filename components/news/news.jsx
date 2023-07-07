@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function News({ data }) {
-  // const {Judul Produk} = data[0].fields
-  console.log(data);
   return (
     <div id="berita">
       <h2 className="h2 mb-6">Berita</h2>
@@ -20,7 +18,7 @@ export default function News({ data }) {
               {judulProduk}
             </Link>
             <div className="mt-4">
-              <div className="lg:float-right  lg:ml-4 max-lg:my-4 max-md:w-full">
+              <div className="lg:float-right lg:ml-4 max-lg:my-4 max-md:w-full">
                 <Image
                   src={"https:" + gambarIlustrasi.fields.file.url}
                   alt="profile"
