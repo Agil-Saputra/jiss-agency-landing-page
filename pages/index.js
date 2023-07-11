@@ -29,7 +29,7 @@ export default function Home({layanan, mitra}) {
     <>
       <Head>
         <title>Jasa Inti Solusi Sukses</title>
-        <meta name="description" content="Mediacare Dashboard Landing Page" />
+        <meta name="description" content="Jasa Inti Solusi Sukses Landing Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>

@@ -15,7 +15,7 @@ export default function Navbar({ children }) {
     },
     {
       menu: "Layanan Kami",
-      path: "/#layanan",
+      path: "/layanan",
     },
     {
       menu: "Berita",
@@ -57,7 +57,7 @@ export default function Navbar({ children }) {
 
   return (
     <>
-      <header className="flex-center gap-8 justify-between mt-5 mb-10">
+      <header className="flex-center gap-8 justify-between z-50 md:mt-5 mb-10 max-md:sticky top-0 bg-white md:px-[8.6875rem] px-4">
         <Link href='/' className="flex items-center gap-2">
           <Image
             src={jissLogo}
@@ -65,8 +65,9 @@ export default function Navbar({ children }) {
             height={70}
             alt="Mediacare Logo"
             priority={true}
+			className="my-2"
           />
-          <p className="text-[2.5rem] uppercase">Jiss</p>
+          <p className="text-[2.5rem] uppercase max-md:hidden">Jiss</p>
         </Link>
 
         <nav
@@ -74,7 +75,7 @@ export default function Navbar({ children }) {
             (showNav
               ? "translate-x-0 max-mxl:bg-primary bg-opacity-50"
               : "max-mxl:translate-x-full") +
-            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-mxl:h-full max-mxl:pt-20"
+            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-mxl:h-full max-mxl:pt-20 z-10"
           }
           onClick={handleToggle}
         >
@@ -94,7 +95,10 @@ export default function Navbar({ children }) {
           {showNav ? <GrClose {...setIcon} /> : <FaBars {...setIcon} />}
         </div>
       </header>
+	  <main className="md:px-[8.6875rem] px-4">
+
       {children}
+	  </main>
     </>
   );
 }

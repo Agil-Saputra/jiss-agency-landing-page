@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "@/layout/navigation/navbar";
-import smsb from "../../components/assets/smsb.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,14 +27,14 @@ export default function index({ mitra }) {
       </p>
       <h2 className="h2 mt-5 mb-4">Mitra Kami</h2>
       {mitra.items.map((item) => {
-		const {slug, judul} = item.fields
+		const {slug, judul, logoMitra} = item.fields
         return (
             <Link
 			key={slug}
               href={`/mitra/${slug}`}
               className="grid place-items-center border-2 max-lg:w-full w-fit p-2 rounded-lg cursor-pointer hover:bg-slate-200"
             >
-              <Image src={smsb} alt="smsb" width={200} height={200} />
+              <Image src={`https:${logoMitra.fields.file.url}`} alt="smsb" width={200} height={200} />
               <p className="capitalize p">{judul}</p>
             </Link>
         );

@@ -22,7 +22,7 @@ export default function hero() {
 		  kami, dan berupaya memberikan hasil yang memuaskan.
 		</p>
 		<div className="flex-center gap-6 max-sm:flex-col w-full justify-center">
-		  <Button1 title="Lihat Layanan" href="#layanan" />
+		  <Button1 title="Lihat Layanan" href="/layanan" />
 		  <Button2 title="Company Profile " href="/company-profile" style="border-primary" />
 		</div>
 	  </div>

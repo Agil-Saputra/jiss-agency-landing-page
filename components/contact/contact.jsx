@@ -2,7 +2,7 @@
 export default function contact() {
   return (
     <section id="contact" className=" rounded-[1rem] py-10 mt-12">
-      <h2 className="h2  max-w-[26ch]">
+      <h2 className="h2  max-w-[26ch] mb-6">
         Kontak
       </h2>
       <p className="p">
