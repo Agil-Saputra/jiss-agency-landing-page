@@ -11,7 +11,12 @@ export default function News({ data }) {
           item.fields;
         return (
           <Link key={i} href={`/mitra/${slug}`} className="flex max-lg:flex-col">
-            
+            <a
+              href={`/mitra/${slug}`}
+              className="md:text-[32px] text-primary text-[15px] underline uppercase"
+            >
+              {judulProduk}
+            </a>
     
                 <Image
                   src={"https:" + gambarIlustrasi.fields.file.url}
