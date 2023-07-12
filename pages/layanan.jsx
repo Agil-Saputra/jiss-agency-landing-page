@@ -16,7 +16,7 @@ export async function getStaticProps(type) {
 export default function layanan({ layanan }) {
   return (
     <Navbar>
-	  <h2 className="h2">Semua Layanan Kami :</h2>
+	  <h2 className="h2">Semua Layanan Kami</h2>
       <div className="flex justify-center max-md:flex-col mt-[3.75rem] gap-6 max-md:px-2">
         {layanan.items.map((item, i) => {
           const { judulLayanan, deskripsiLayanan, ilustrasiLayanan } =

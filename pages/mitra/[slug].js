@@ -42,8 +42,10 @@ const Mitra = ({ mitra }) => {
     infoDetail,
     welcomeText,
     infoPentingRefrensi,
-    formulir,
+    urlFormulir,
   } = mitra.fields;
+
+  console.log(mitra.fields);
   return (
     <Navbar>
       <h2 className="h2 mb-6">{welcomeText}</h2>
@@ -67,7 +69,7 @@ const Mitra = ({ mitra }) => {
           return (
             <div key={i} className="mb-2">
               <h3 className="lg:text-3xl text-[1.2rem] font-bold">
-                {judulInfo} :{" "}
+                {judulInfo} :
               </h3>
               <ul>
                 {infoDetail.map((item, i) => (
@@ -81,6 +83,15 @@ const Mitra = ({ mitra }) => {
           );
         })}
       </div>
+
+      {urlFormulir && (
+        <div className="mb-10">
+          <h2 className="h2 capitalize my-6">Formulir Pendaftaran</h2>
+          <a href={urlFormulir} className="underline text-primary text-lg">
+            Isi Formulir Disini
+          </a>
+        </div>
+      )}
 
       <div>
         <h2 className="h2 capitalize mb-6">Informasi Penting & Referensi</h2>
@@ -112,7 +123,7 @@ const Mitra = ({ mitra }) => {
                 </a>
               ) : null}
               {fileRefrensi ? (
-                <AllPages pdf={fileRefrensi.fields.file.url}/>
+                <AllPages pdf={fileRefrensi.fields.file.url} />
               ) : null}
             </div>
           );
@@ -129,13 +140,6 @@ const Mitra = ({ mitra }) => {
             height={400}
           />
         </div>
-      </div>
-
-      <div className="mb-10">
-        <h2 className="h2 capitalize my-6">Download Formulir</h2>
-        <a href={`https:${formulir.fields.file.url}`} className="underline text-primary" download>
-          Download Formulir Disini
-        </a>
       </div>
     </Navbar>
   );
