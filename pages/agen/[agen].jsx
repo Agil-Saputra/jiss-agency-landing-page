@@ -35,35 +35,39 @@ export async function getStaticProps({ params }) {
 }
 
 export default function agen({ agen }) {
-  const { nama, alamat, fotoAgen, nik, wilayahPemasaran,slug } =
-    agen.fields;
+  const { nama, alamat, fotoAgen, nik, wilayahPemasaran, slug } = agen.fields;
 
   return (
-	<Navbar>
-		<div className="flex gap-4 max-md:flex-col">
-		<Link href={"/agen"} className="flex gap-2 items-center"><FaArrowLeft/>Kembali ke Agen</Link>
-			<Image
-				src={`https:${fotoAgen.fields.file.url}`}
-				width={400}
-				height={400}
-				alt={nama}
-				priority
-				className="rounded-md"
-			/>
-			<div>
-				<p className="p">Nama : {nama}</p>
-				<p className="p">Alamat : {alamat}</p>
-				<p className="p">NIK : {nik}</p>
-				<div className="p">
-				Wilayah Pemasaran : 
-					{
-					 wilayahPemasaran.map((item, i ) => (
-						<p key={i}>- {item}</p>
-					 ))
-					}
-				</div>
-			</div>
-		</div>
-	</Navbar>
-  )
+    <Navbar>
+      <Link href={"/agen"} className="flex gap-2 items-center">
+        <FaArrowLeft />
+        Kembali ke Agen
+      </Link>
+      <div>
+        <div className="flex gap-4 max-md:flex-col">
+          <Image
+            src={`https:${fotoAgen.fields.file.url}`}
+            width={400}
+            height={400}
+            alt={nama}
+            priority
+            className="rounded-md"
+          />
+        </div>
+		
+        <div>
+          <p className="p">Nama : {nama}</p>
+          <p className="p">Alamat : {alamat}</p>
+          <p className="p">NIK : {nik}</p>
+          <div className="p">
+            Wilayah Pemasaran :
+            {wilayahPemasaran.map((item, i) => (
+              <p key={i}>- {item}</p>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </Navbar>
+  );
 }

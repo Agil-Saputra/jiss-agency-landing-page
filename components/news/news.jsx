@@ -17,9 +17,9 @@ export default function News({ data }) {
     <div id="berita">
       <h2 className="h2 mb-6">Berita</h2>
       {data.map((item) => {
-        const { judulProduk, gambarIlustrasi, slug, i } = item.fields;
+        const { judulProduk, gambarIlustrasi, slug} = item.fields;
         return (
-          <div key={i} className="flex max-lg:flex-col">
+          <div key={slug} className="flex max-lg:flex-col">
            <div className={poppins.className}>
 			 <a
 			   href={`/mitra/${slug}`}
