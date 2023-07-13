@@ -4,7 +4,6 @@ import { PrevArrow, NextArrow } from '../general/arrows';
 import PeopleCard from './peopleCard';
 
 export default function SliderPeople({data}) {
-	console.log(data.items)
 	const settings = {
 		dots: false,
 		infinite: false,
@@ -16,14 +15,6 @@ export default function SliderPeople({data}) {
 		nextArrow : <NextArrow/>,
 		prevArrow  : <PrevArrow/>,
 		responsive: [
-		 
-		//   {
-		// 	breakpoint: 883,
-		// 	settings: {
-		// 	  slidesToShow: 3,
-		// 	  slidesToScroll: 2,
-		// 	},
-		//   },
 		  {
 			breakpoint: 712,
 			settings: {
@@ -47,7 +38,7 @@ export default function SliderPeople({data}) {
 		{data.items.map(item => {
 			const {nama, jabatan, fotoProfile} = item.fields
 			return (
-				<PeopleCard name={nama} position={jabatan} imageURL={fotoProfile.fields.file.url}/>
+				<PeopleCard key={nama} name={nama} position={jabatan} imageURL={fotoProfile.fields.file.url}/>
 			)
 		})}
 		</Slider>

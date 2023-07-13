@@ -16,7 +16,6 @@ export async function getStaticProps(type) {
 }
 
 export default function agen({agen}) {
-	console.log(agen.items);
   return (
     <Navbar>
 	
