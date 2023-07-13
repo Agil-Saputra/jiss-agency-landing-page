@@ -8,6 +8,7 @@ import Contact from "@/components/contact/contact";
 import Footer from "@/components/footer/footer";
 import News from "@/components/news/news";
 import Questions from "@/components/questions/question";
+import SliderPeople from "@/components/people/sliderPeople";
 
 import { client } from "@/contentful/client";
 
@@ -41,6 +42,7 @@ export default function Home({ layanan, mitra }) {
           <Hero />
           <Services data={layanan.items} />
           <Questions data={layanan.items} />
+		  <SliderPeople/>
           <News data={mitra.items} />
         </main>
       </Navbar>

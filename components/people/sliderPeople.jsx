@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function SliderPeople() {
   return (
-	<div>SliderPeople</div>
+	<section>
+		<h2 className='h2'>Struktur Organisasi</h2>
+	</section>
   )
 }
