@@ -39,12 +39,11 @@ export default function agen({ agen }) {
 
   return (
     <Navbar>
-      <Link href={"/agen"} className="flex gap-2 items-center">
+      <Link href={"/agen"} className="flex gap-2 items-center mb-6 px-2 py-1 border-[1px] rounded-lg w-fit">
         <FaArrowLeft />
         Kembali ke Agen
       </Link>
-      <div>
-        <div className="flex gap-4 max-md:flex-col">
+      <div className="flex gap-4 max-md:flex-col">
           <Image
             src={`https:${fotoAgen.fields.file.url}`}
             width={400}
@@ -53,14 +52,13 @@ export default function agen({ agen }) {
             priority
             className="rounded-md"
           />
-        </div>
 		
         <div>
-          <p className="p">Nama : {nama}</p>
-          <p className="p">Alamat : {alamat}</p>
-          <p className="p">NIK : {nik}</p>
+          <p className="p"><span className="font-bold text-xl md:text-3xl">Nama :</span> {nama}</p>
+          <p className="p"><span className="font-bold text-xl md:text-3xl">Alamat : </span>{alamat}</p>
+          <p className="p"><span className="font-bold text-xl md:text-3xl">NIK :</span> {nik}</p>
           <div className="p">
-            Wilayah Pemasaran :
+           <span className="font-bold text-xl md:text-3xl">Wilayah Pemasaran :</span> 
             {wilayahPemasaran.map((item, i) => (
               <p key={i}>- {item}</p>
             ))}

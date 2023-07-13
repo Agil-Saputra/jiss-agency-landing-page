@@ -16,29 +16,31 @@ export default function hero() {
           Perkenalkan, kami Jasa Inti Solusi Sukses, sebuah perusahaan yang
           bergerak di bidang jasa agensi pemasaran. Kami hadir sebagai startup
           marketing agency untuk menjawab kebutuhan pemasaran produk yang Anda
-          hadapi. Sejalan dengan nama, simbol, dan logo perusahaan kami: 
-		  <br/>
-		  <br/>
-		  1.Jasa Inti Solusi Sukses kami bergerak di bidang jasa yang khusus menangani
-          inti persoalan perusahaan. Kami akan menjadi solusi untuk membuat
-          usaha Anda sukses. 
-		  <br/>
-		  <br/>
-		  2.Logo kami berbentuk heksagonal rumah lebah, yang
-          menggambarkan bahwa kami sebagai perusahaan pelengkap, bukan pesaing
-          atau penantang yang dianggap sebagai ancaman oleh kompetitor. 
-		  <br/>
-		  <br/>
-		  3.Jasa Inti Solusi Sukses hadir sebagai pelengkap. Simbol hewan kupu-kupu
-          cantik berwarna kuning mengandung pesan bahwa kami selalu memiliki
-          kemajuan yang baik dalam setiap proses. Kupu-kupu juga dikenal sebagai
-          hewan yang mampu menjaga keseimbangan ekosistem alam melalui simbiosis
-          mutualisme. Warna kuning melambangkan kejayaan dan kesuksesan.
-		  <br/>
-		  <br/>
-          Demikianlah deskripsi tentang Jasa Inti Solusi Sukses. Kami siap
-          membantu Anda mengatasi berbagai tantangan dalam pemasaran produk
-          Anda.
+          hadapi. Sejalan dengan nama, simbol, dan logo perusahaan kami:
+          <br />
+          <br />
+          1.<strong>Jasa Inti Solusi Sukses</strong> kami bergerak di bidang
+          jasa yang khusus menangani inti persoalan perusahaan. Kami akan
+          menjadi solusi untuk membuat usaha Anda sukses.
+          <br />
+          <br />
+          2.<strong>Logo</strong> kami berbentuk heksagonal rumah lebah, yang
+          menggambarkan
+          <strong> spirit kami sebagai perusahaan pelengkap</strong>, bukan
+          pesaing atau penantang yang dianggap sebagai ancaman oleh kompetitor.
+          <br />
+          <br />
+          3.Jasa Inti Solusi Sukses hadir sebagai pelengkap.
+          <strong> Simbol hewan kupu-kupu cantik berwarna kuning </strong>
+          Kupu-kupu yang memiliki pesan bahwa kami selalu{" "}
+          <i>memiliki progress yang baik dalam setiap proses</i> dan kupu - kupu
+          dikenal sebagai hewan yang mampu menjadi penstabil ekosistim alam
+          dengan sifat <i>simbiosis mutualisme</i>, sedangkan warna kuning
+          adalah warna kejayaan dan kesukses.
+          <br />
+          <br />
+          Kami siap membantu Anda mengatasi berbagai tantangan dalam pemasaran
+          produk Anda.
         </p>
 
         <div className="marquee">
