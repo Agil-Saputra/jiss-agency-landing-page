@@ -36,7 +36,7 @@ export default function hero() {
           <i>memiliki progress yang baik dalam setiap proses</i> dan kupu - kupu
           dikenal sebagai hewan yang mampu menjadi penstabil ekosistim alam
           dengan sifat <i>simbiosis mutualisme</i>, sedangkan warna kuning
-          adalah warna kejayaan dan kesukses.
+          adalah warna kejayaan dan kesuksesan.
           <br />
           <br />
           Kami siap membantu Anda mengatasi berbagai tantangan dalam pemasaran
