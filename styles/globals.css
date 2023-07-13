@@ -148,4 +148,17 @@
 }
 
 
+.arrow {
+    @apply relative top-[40%] z-10 rounded-[150px] grid place-items-center p-2 shadow-lg border-[1px] bg-white border-primary hover:border-inherit 
+}
+.arrow-disabled {
+    @apply scale-0
+}
+.arrow-left {
+    @apply absolute left-[-20px] md:left-[-35px]
+}
+.arrow-right {
+    @apply absolute right-[-20px] md:right-[-35px]
+}
+
   
