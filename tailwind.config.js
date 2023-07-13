@@ -18,6 +18,12 @@ module.exports = {
         'xl' : "1153px",
 		'mxl' : "1440px"
       },
+	  boxShadow: {
+        '3xl': ' 0 50px 9px 5000px rgb(0, 0, 0, 0.5)',
+      },
+	  backgroundImage: {
+        gradient: "linear-gradient(-45deg, #333, #FAB100, #FAB000, #333)",
+      },
     },
   },
   plugins: [],

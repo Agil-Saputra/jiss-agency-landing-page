@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import jissLogo from "../../components/assets/logo.svg";
+import jissLogo from "@/assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 
@@ -26,12 +26,12 @@ export default function Navbar({ children }) {
       path: "/company-profile",
     },
     {
-      menu: "Mitra",
+      menu: "Mitra Koorporasi",
       path: "/mitra",
     },
     {
-      menu: "JISS Tactical",
-      path: "/jiss-tactical",
+      menu: "Agen JISS Agency",
+      path: "/agen",
     },
     {
       menu: "Kontak",
@@ -40,7 +40,7 @@ export default function Navbar({ children }) {
   ];
 
   const setIcon = {
-    size: 25,
+    size: 20,
     className: "mxl:hidden z-20 relative",
     onClick: handleToggle,
   };
@@ -63,9 +63,9 @@ export default function Navbar({ children }) {
             src={jissLogo}
             width={70}
             height={70}
-            alt="Mediacare Logo"
+            alt="jiss Logo"
             priority={true}
-			className="my-2"
+			className="my-2 max-md:w-[40px]"
           />
           <p className="text-[2.5rem] uppercase max-md:hidden">Jiss</p>
         </Link>
@@ -73,9 +73,9 @@ export default function Navbar({ children }) {
         <nav
           className={
             (showNav
-              ? "translate-x-0 max-mxl:bg-primary bg-opacity-50"
+              ? "translate-x-0 max-mxl:bg-primary bg-opacity-50 max-mxl:shadow-3xl"
               : "max-mxl:translate-x-full") +
-            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-mxl:h-full max-mxl:pt-20 z-10"
+            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-xml:h-screen overflow-scroll max-mxl:h-full max-mxl:pt-16 z-10"
           }
           onClick={handleToggle}
         >
