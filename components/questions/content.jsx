@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 
-const banner = ({ toggle, faq: {question, open, answer}, index}) => {
+const Question = ({ toggle, question, open, answer, index}) => {
   return (
     <div onClick={() => toggle(index)} className="cursor-pointer border-t group w-full">
     <div className="flex items-center gap-2 justify-between bg-slate-200 md:px-10 px-4 text-black group-hover:text-primary w-full">
@@ -15,5 +15,5 @@ const banner = ({ toggle, faq: {question, open, answer}, index}) => {
 
 
 
-export default banner;
+export default Question;
 

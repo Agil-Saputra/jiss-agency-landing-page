@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/layout/navigation/navbar";
 import { client } from "@/contentful/client";
 import AllPages from "@/components/pdf/all-pages";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 export async function getStaticPaths() {
   const product = await client.getEntries({
@@ -32,7 +33,6 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-
 const Mitra = ({ mitra }) => {
   const {
     judulProduk,
@@ -65,16 +65,19 @@ const Mitra = ({ mitra }) => {
         {infoDetail.map((item, i) => {
           const { judulInfo, infoDetail } = item.fields;
           return (
-            <div key={i} className="mb-2">
-              <h3 className="lg:text-3xl text-[1.2rem] font-bold">
-                {judulInfo} :
-              </h3>
-              <ul>
-                {infoDetail.map((item, i) => (
-                  <li className="p" key={i}>
-                    {" "}
-                    - {item}
-                  </li>
+            <div key={i} className="cursor-pointer border-t group w-full my-6">
+              <div className="bg-slate-200 md:px-10 px-4 text-black group-hover:text-primary w-full">
+                <h1 className="font-medium text-xl  md:text-3xl transition-all ease-in-out ">
+                  {judulInfo}
+                </h1>
+              </div>
+              <ul
+                className={
+                  "h-full py-4 p overflow-y-hidden text-grayfishblue bg-slate-100 transition-all ease-in-out duration-200 md:px-10 px-4"
+                }
+              >
+                {infoDetail.map((info, i) => (
+                  <li key={i}> ● {info}</li>
                 ))}
               </ul>
             </div>
@@ -85,8 +88,11 @@ const Mitra = ({ mitra }) => {
       {urlFormulir && (
         <div className="mb-10">
           <h2 className="h2 capitalize my-6">Formulir Pendaftaran</h2>
-          <a href={urlFormulir} className="underline text-primary text-lg">
-            Isi Formulir Disini
+          <a
+            href={urlFormulir}
+            className="flex items-center gap-2  w-fit underline text-primary text-lg p-2 border-2 rounded-lg border-primary"
+          >
+            Isi Formulir Disini<BsBoxArrowUpRight/>
           </a>
         </div>
       )}
@@ -115,9 +121,9 @@ const Mitra = ({ mitra }) => {
               {websiteReferensi ? (
                 <a
                   href={websiteReferensi}
-                  className="underline text-primary mt-3"
+                  className="underline text-primary text-lg p-2 border-2 rounded-lg border-primary mt-3 flex items-center gap-2  w-fit "
                 >
-                  Info Lebih lanjut Klik Disini
+                  Info Lebih lanjut Klik Disini<BsBoxArrowUpRight/>
                 </a>
               ) : null}
               {fileRefrensi ? (

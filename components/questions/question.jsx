@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Content from "./content";
+import FaQ from "./content";
 
 const Questions = () => {
   const [faqs, setFaqs] = useState([
@@ -46,7 +46,7 @@ const Questions = () => {
       </p>
       <div className=" border-b my-8 ">
         {faqs.map((faq, i) => (
-          <Content key={i} index={i} toggle={handleToggle} faq={faq} />
+          <FaQ key={i} index={i} toggle={handleToggle} question={faq.question} answer={faq.answer} open={faq.open} />
         ))}
       </div>
       <div></div>
