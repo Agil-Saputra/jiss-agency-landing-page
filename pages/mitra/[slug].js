@@ -65,9 +65,9 @@ const Mitra = ({ mitra }) => {
         {infoDetail.map((item, i) => {
           const { judulInfo, infoDetail } = item.fields;
           return (
-            <div key={i} className="cursor-pointer border-t group w-full my-6">
-              <div className="bg-slate-200 md:px-10 px-4 text-black group-hover:text-primary w-full">
-                <h1 className="font-medium text-xl  md:text-3xl transition-all ease-in-out ">
+            <div key={i} className="border-t w-full my-6">
+              <div className="bg-slate-200 md:px-10 px-4 text-black w-full">
+                <h1 className="font-medium text-xl  md:text-3xl transition-all ease-in-out py-2">
                   {judulInfo}
                 </h1>
               </div>
