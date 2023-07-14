@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import Head from "next/head";
 import Navbar from "@/layout/navigation/navbar";
 import { client } from "@/contentful/client";
 import AllPagesPDF from "@/components/pdf/all-pages";
@@ -15,11 +16,22 @@ export async function getStaticProps(type) {
 }
 
 export default function companyProfile({ redaksi }) {
-	const pdfURl = redaksi.items[0].fields.companyProfile.fields.file.url;
+  const pdfURl = redaksi.items[0].fields.companyProfile.fields.file.url;
   return (
-    <Navbar>
-      <h2 className="h2 mb-6">Our Company Profile</h2>
-     <AllPagesPDF pdf={pdfURl}/>
-    </Navbar>
+    <>
+      <Head>
+        <title>Company Profile | Jasa Inti Solusi Sukses</title>
+        <meta
+          name="description"
+          content="Jasa Inti Solusi Sukses Landing Page"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/logoipsum-223 2.svg" />
+      </Head>
+      <Navbar>
+        <h2 className="h2 mb-6">Our Company Profile</h2>
+        <AllPagesPDF pdf={pdfURl} />
+      </Navbar>
+    </>
   );
 }
