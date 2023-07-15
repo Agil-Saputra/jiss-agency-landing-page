@@ -29,36 +29,29 @@ export default function agen({ agen }) {
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>
       <Navbar>
-        <h2 className="h2">Resmi AJA</h2>
-        <p className="p">
-          Kelompok Mitra Kerja Jiss agency dalam memasarkan produk yang{" "}
-          <span className="underline">resmi dan terdaftar</span> sebagai rekanan{" "}
-          <span className="font-bold">AJA (Agen JISS Agency)</span>
-        </p>
-        <div className="my-10 w-full">
-          {agen.items.map((item, i) => {
-            const {
-              nama,
-              nik,
-              alamat,
-              jenisKelamin,
-              fotoAgen,
-              wilayahPemasaran,
-              slug,
-            } = item.fields;
-            return (
-              <AgentCard
-                key={i}
-                name={nama}
-                address={alamat}
-                slug={slug}
-                gender={jenisKelamin}
-                id={nik}
-                profilePhoto={fotoAgen.fields.file.url}
-                marketLocation={wilayahPemasaran}
-              />
-            );
-          })}
+        <div className="main-padding">
+          <h2 className="h2">Resmi AJA</h2>
+          <p className="p">
+            Kelompok Mitra Kerja Jiss agency dalam memasarkan produk yang{" "}
+            <span className="underline">resmi dan terdaftar</span> sebagai
+            rekanan <span className="font-bold">AJA (Agen JISS Agency)</span>
+          </p>
+          <div className="my-10 w-full">
+            {agen.items.map((item, i) => {
+              const { nama, whatsapp, slug, fotoAgen, wilayahKabupaten } =
+                item.fields;
+              return (
+                <AgentCard
+                  key={i}
+                  name={nama}
+                  slug={slug}
+                  profilePhoto={fotoAgen.fields.file.url}
+                  hatsappNumber={whatsapp}
+                  ocation={wilayahKabupaten}
+                />
+              );
+            })}
+          </div>
         </div>
       </Navbar>
     </>

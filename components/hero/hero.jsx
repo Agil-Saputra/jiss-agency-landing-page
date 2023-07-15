@@ -1,18 +1,24 @@
 import Button1 from "../general/button1";
 import Button2 from "../general/button2";
+import RunningText from "./runningText";
+import VideoBackground from "./videoBackground/video";
 
-export default function hero() {
+export default function hero({ data }) {
+  const video = data.items[0].fields.backgroundVideo.fields.file.url;
   return (
-    <section id="home" className="md:mb-[5.5625rem] mb-4 mt-20 max-md:mt-10 ">
+    <section id="home" className="md:mb-[5.5625rem] mb-4  ">
       <div>
-        <h1 className="h1 my-6 md:max-w-[25ch]">
-          👋Hai!! Selamat Datang Di Pusat Informasi JISS Agency
-        </h1>
-        <h2 className="h2 font-bold text-primary ">
-          {" "}
-          &ldquo;Bergabung Bertumbuh Bersama&ldquo;
-        </h2>
-        <p className="my-8 p lg:text-left text-justify">
+        <div className="mt-16">
+          <h1 className="h1 my-6 md:max-w-[35ch] text-white md:px-[8.6875rem] px-4">
+            Hai !, Selamat Datang Di Pusat Informasi JISS Agency
+          </h1>
+          <h2 className="h2 font-bold text-primary md:px-[8.6875rem] px-4">
+            {" "}
+            &ldquo;Bergabung Bertumbuh Bersama&ldquo;
+          </h2>
+          <VideoBackground videoSrc={video} />
+        </div>
+        <p className="mb-8 md:mt-[8rem] mt-[2rem] py-6 p lg:text-left text-justify md:px-[8.6875rem] px-4 bg-white">
           Perkenalkan, kami Jasa Inti Solusi Sukses, sebuah perusahaan yang
           bergerak di bidang jasa agensi pemasaran. Kami hadir sebagai startup
           marketing agency untuk menjawab kebutuhan pemasaran produk yang Anda
@@ -43,14 +49,9 @@ export default function hero() {
           produk Anda.
         </p>
 
-        <div className="marquee">
-          <p>
-            Silahkan Cari Produk Yang Anda butuhkan Kami akan melayani anda
-            dengan sepenuh Hati♥️.
-          </p>
-        </div>
+          <RunningText />
 
-        <div className="flex-center gap-6 max-sm:flex-col w-full justify-start mt-10">
+        <div className="flex-center gap-6 max-sm:flex-col w-full justify-center mt-10 md:px-[8.6875rem] px-4">
           <Button1 title="Lihat Layanan" href="/layanan" />
           <Button2
             title="Company Profile "

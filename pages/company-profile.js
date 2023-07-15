@@ -29,8 +29,10 @@ export default function companyProfile({ redaksi }) {
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>
       <Navbar>
-        <h2 className="h2 mb-6">Our Company Profile</h2>
-        <AllPagesPDF pdf={pdfURl} />
+        <div className="main-padding">
+			<h2 className="h2 mb-6">Our Company Profile</h2>
+			<AllPagesPDF pdf={pdfURl} />
+		</div>
       </Navbar>
     </>
   );

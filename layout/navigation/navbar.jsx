@@ -57,7 +57,7 @@ export default function Navbar({ children }) {
 
   return (
     <>
-      <header className="flex-center gap-8 justify-between z-50 md:mt-5 mb-10 max-md:sticky top-0 bg-white md:px-[8.6875rem] px-4">
+      <header className="flex items-center gap-8 justify-between z-50 md:mt-5  sticky top-0 bg-gradientBlue md:px-[8.6875rem] px-4 text-white">
         <Link href='/' className="flex items-center gap-2">
           <Image
             src={jissLogo}
@@ -73,9 +73,9 @@ export default function Navbar({ children }) {
         <nav
           className={
             (showNav
-              ? "translate-x-0 max-mxl:bg-primary bg-opacity-50 max-mxl:shadow-3xl"
+              ? "translate-x-0 max-mxl:bg-gradient bg-opacity-50 max-mxl:shadow-3xl"
               : "max-mxl:translate-x-full") +
-            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-xml:h-screen overflow-scroll max-mxl:h-full max-mxl:pt-16 z-10"
+            " smooth flex gap-8 max-mxl:gap-4 items-center max-mxl:fixed max-mxl:flex-col top-0 right-0 max-mxl:z-10 max-mxl:w-[60%] max-xml:h-screen overflow-scroll max-mxl:h-full max-mxl:pt-16 z-10 max-mxl:bg-gradientBlue"
           }
           onClick={handleToggle}
         >
@@ -83,7 +83,7 @@ export default function Navbar({ children }) {
             <Link
               href={item.path}
               scroll={false}
-              className="hover:text-slate-400 smooth text-[18px] font-light  max-lg:w-full max-lg:px-6 max-lg:py-2"
+              className="hover:text-slate-400 smooth text-[18px] max-lg:w-full max-lg:px-6 max-lg:py-2 font-[400]"
               key={i}
             >
               {item.menu}
@@ -95,10 +95,7 @@ export default function Navbar({ children }) {
           {showNav ? <GrClose {...setIcon} /> : <FaBars {...setIcon} />}
         </div>
       </header>
-	  <main className="md:px-[8.6875rem] px-4">
-
       {children}
-	  </main>
     </>
   );
 }

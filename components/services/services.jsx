@@ -2,7 +2,7 @@ import Card from "./card";
 
 export default function services({ data }) {
   return (
-    <section id="layanan" className="md:mb-16 mb-10 mt-8">
+    <section id="layanan" className="md:mb-16 mb-10 mt-10">
       <div className="my-10">
         <h2 className="h2">Semua Layanan Kami</h2>
         <p className="p">

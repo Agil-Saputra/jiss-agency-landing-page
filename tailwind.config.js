@@ -22,7 +22,8 @@ module.exports = {
         '3xl': ' 0 50px 9px 5000px rgb(0, 0, 0, 0.5)',
       },
 	  backgroundImage: {
-        gradient: "linear-gradient(-45deg, #333, #FAB100, #FAB000, #333)",
+        gradientPrimary: "linear-gradient(-45deg, #333, #FAB100, #FAB000, #333)",
+        gradientBlue: "linear-gradient(-45deg, #333, rgba(50, 157, 255, 1), rgba(50, 157, 255, 1), #333)",
       },
     },
   },

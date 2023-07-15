@@ -17,17 +17,19 @@ export async function getStaticProps(type) {
   const layanan = await client.getEntries({ content_type: "layanan" });
   const mitra = await client.getEntries({ content_type: "mitra" });
   const orang = await client.getEntries({ content_type: "orang" });
+  const redaksi = await client.getEntries({ content_type: "redaksi" });
   // passing props for each content-model response
   return {
     props: {
       layanan,
       mitra,
-	  orang
+      orang,
+      redaksi,
     },
   };
 }
 
-export default function Home({ layanan, mitra, orang }) {
+export default function Home({ layanan, mitra, orang, redaksi }) {
   return (
     <>
       <Head>
@@ -40,18 +42,18 @@ export default function Home({ layanan, mitra, orang }) {
         <link rel="icon" href="/logoipsum-223 2.svg" />
       </Head>
       <Navbar>
-        <main>
-          <Hero />
+        <Hero data={redaksi} />
+        <main className="main-padding">
           <Services data={layanan.items} />
           <Questions data={layanan.items} />
-		  <SliderPeople data={orang}/>
+          <SliderPeople data={orang} />
           <News data={mitra.items} />
         </main>
       </Navbar>
-      <div className="bg-gradient">
-		<Contact />
-		<Footer />
-	  </div>
+      <div className="bg-gradientPrimary">
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }
