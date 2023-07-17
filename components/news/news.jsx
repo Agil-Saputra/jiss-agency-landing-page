@@ -15,7 +15,7 @@ const poppins = Poppins(
 export default function News({ data }) {
   return (
     <div id="berita">
-      <h2 className="h2 mb-6">Berita</h2>
+      <h2 className="h2 mb-6">Blog Media Satpam</h2>
       {data.map((item) => {
         const { judulProduk, gambarIlustrasi, slug} = item.fields;
         return (

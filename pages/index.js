@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-// import all components
+// import all section components
 import Navbar from "@/layout/navigation/navbar";
 import Hero from "@/components/hero/hero";
 import Services from "@/components/services/services";
@@ -9,7 +9,11 @@ import Footer from "@/components/footer/footer";
 import News from "@/components/news/news";
 import Questions from "@/components/questions/question";
 import SliderPeople from "@/components/people/sliderPeople";
+import Katalog from "@/components/katalog/katalog";
 
+
+
+// others
 import { client } from "@/contentful/client";
 
 // fetching data from Contentful CMS
@@ -47,6 +51,7 @@ export default function Home({ layanan, mitra, orang, redaksi }) {
           <Services data={layanan.items} />
           <Questions data={layanan.items} />
           <SliderPeople data={orang} />
+		  <Katalog/>
           <News data={mitra.items} />
         </main>
       </Navbar>

@@ -4,6 +4,7 @@ import Navbar from "@/layout/navigation/navbar";
 import AgentCard from "@/components/agent/agentCard";
 
 import { client } from "@/contentful/client";
+import Link from "@/components/general/link";
 
 // fetching data from Contentful CMS
 export async function getStaticProps(type) {
@@ -36,7 +37,17 @@ export default function agen({ agen }) {
             <span className="underline">resmi dan terdaftar</span> sebagai
             rekanan <span className="font-bold">AJA (Agen JISS Agency)</span>
           </p>
+
+          <div>
+            <h2 className="text-3xl font-semibold max-md:text-2xl capitalize my-6">
+              Formulir Pendaftaran AJA
+            </h2>
+			<Link url="https://forms.gle/8aYA4UfAUomgt3Bi6" title="Daftar Jadi AJA disini"/>
+          </div>
           <div className="my-10 w-full">
+		  <h2 className="text-3xl font-semibold max-md:text-2xl capitalize my-6">
+             Rekan AJA
+            </h2>
             {agen.items.map((item, i) => {
               const { nama, whatsapp, slug, fotoAgen, wilayahKabupaten } =
                 item.fields;
@@ -46,8 +57,8 @@ export default function agen({ agen }) {
                   name={nama}
                   slug={slug}
                   profilePhoto={fotoAgen.fields.file.url}
-                  hatsappNumber={whatsapp}
-                  ocation={wilayahKabupaten}
+                  whatsappNumber={whatsapp}
+                  location={wilayahKabupaten}
                 />
               );
             })}
