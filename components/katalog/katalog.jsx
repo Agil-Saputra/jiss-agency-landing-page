@@ -20,20 +20,20 @@ export default function Katalog({ dataMitra }) {
       <p className="text-xl mb-3 md:text-2xl font-semibold mt-6">
         Kualifikasi :{" "}
       </p>
-      <div className="flex max-md:flex-col text-left gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 text-left gap-4">
         {dataMitra.map((item) => {
           const { judulLink, slug, gambarIlustrasi } = item.fields;
           return (
-            <Link href={`/mitra/${slug}`} key={slug} className="p-2 border-2 hover:scale-105 rounded-md  transition-all group">
+            <Link href={`/mitra/${slug}`} key={slug} className="p-2 border-2 rounded-md group hover:scale-105 smooth">
               <Image
                 width={400}
                 height={400}
                 src={"https:" + gambarIlustrasi.fields.file.url}
                 alt="ilustrasi Diksar"
-				className="skeleton-bg "
+				className=" w-full bg-slate-200"
               />
               <p
-                className="md:min-w-[400px] text-lg md:text-2xl underline text-primary border-primary border-[1px] py-1 px-2 flex items-center gap-2 justify-between rounded-sm group-hover:bg-gradientPrimary group-hover:text-white group-hover:bg-opacity-75 transition-all "
+                className="md:min-w-[400px] text-lg md:text-2xl underline text-primary border-primary border-[1px] py-1 px-2 flex items-center gap-2 justify-between rounded-sm group-hover:bg-gradientPrimary group-hover:text-white smooth"
               >
                 {judulLink}
                 <BsBoxArrowUpRight />

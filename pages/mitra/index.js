@@ -41,24 +41,26 @@ export default function index({ mitra }) {
             signifikan bagi kesuksesan bisnis mereka.
           </p>
 
-          {mitra.items.map((item) => {
-            const { slug, judul, logoMitra } = item.fields;
-            return (
-              <Link
-                key={slug}
-                href={`/mitra/${slug}`}
-                className="grid place-items-center border-2 max-lg:w-full w-fit p-2 rounded-lg cursor-pointer hover:bg-slate-200"
-              >
-                <Image
-                  src={`https:${logoMitra.fields.file.url}`}
-                  alt="smsb"
-                  width={200}
-                  height={200}
-                />
-                <p className="capitalize p">{judul}</p>
-              </Link>
-            );
-          })}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6">
+			{mitra.items.map((item) => {
+			  const { slug, judul, logoMitra } = item.fields;
+			  return (
+				<Link
+				  key={slug}
+				  href={`/mitra/${slug}`}
+				  className="grid place-items-center border-2 max-lg:w-full p-2 rounded-lg cursor-pointer hover:bg-slate-200 w-full text-center"
+				>
+				  <Image
+					src={`https:${logoMitra.fields.file.url}`}
+					alt="smsb"
+					width={200}
+					height={200}
+				  />
+				  <p className="capitalize p">{judul}</p>
+				</Link>
+			  );
+			})}
+		  </div>
 
           <h2 className="h2 mt-5 mb-4">Piagam Kerjasama</h2>
           <div className="w-full flex max-md:flex-col gap-6">

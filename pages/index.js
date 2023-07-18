@@ -51,8 +51,8 @@ export default function Home({ layanan, mitra, orang, redaksi, mediaSatpam }) {
         <Hero data={redaksi} />
         <main className="main-padding">
           <Services dataLayanan={layanan.items} />
-          <Questions/>
           <SliderPeople dataOrang={orang.items} />
+          <Questions/>
 		  <Katalog dataMitra={mitra.items}/>
           <News dataMedia={mediaSatpam.items}/>
         </main>

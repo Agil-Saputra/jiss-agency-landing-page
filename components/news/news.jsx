@@ -11,11 +11,10 @@ const poppins = Poppins({
 });
 
 export default function News({ dataMedia }) {
-  console.log(dataMedia.map((item) => item));
   return (
     <div>
       <h2 className="h2 mb-6">Blog Media Satpam</h2>
-      <div className="flex gap-4 max-md:flex-col">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {dataMedia.map((item, i) => {
           const { judul, ilustrasiMedia, urlMedia } = item.fields;
           return (

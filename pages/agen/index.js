@@ -39,6 +39,9 @@ export default function agen({ agen }) {
           </p>
 
           <div>
+            <h2 className="h2 my-6">
+              Ketentuan & Syarat Menjadi AJA (Agen JISS Agency)
+            </h2>
             <h2 className="text-3xl font-semibold max-md:text-2xl capitalize my-6">
               Formulir Pendaftaran AJA
             </h2>

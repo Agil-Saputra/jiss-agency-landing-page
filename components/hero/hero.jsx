@@ -19,37 +19,25 @@ export default function hero({ data }) {
           <VideoBackground videoSrc={video} />
         </div>
         <p className="mb-8 md:mt-[8rem] mt-[2rem] py-6 p lg:text-left text-justify md:px-[8.6875rem] px-4 bg-white">
-          Perkenalkan, kami Jasa Inti Solusi Sukses, sebuah perusahaan yang
-          bergerak di bidang jasa agensi pemasaran. Kami hadir sebagai startup
-          marketing agency untuk menjawab kebutuhan pemasaran produk yang Anda
-          hadapi. Sejalan dengan nama, simbol, dan logo perusahaan kami:
-          <br />
-          <br />
-          1.<strong>Jasa Inti Solusi Sukses</strong> kami bergerak di bidang
-          jasa yang khusus menangani inti persoalan perusahaan. Kami akan
-          menjadi solusi untuk membuat usaha Anda sukses.
-          <br />
-          <br />
-          2.<strong>Logo</strong> kami berbentuk heksagonal rumah lebah, yang
-          menggambarkan
-          <strong> spirit kami sebagai perusahaan pelengkap</strong>, bukan
-          pesaing atau penantang yang dianggap sebagai ancaman oleh kompetitor.
-          <br />
-          <br />
-          3.Jasa Inti Solusi Sukses hadir sebagai pelengkap.
-          <strong> Simbol hewan kupu-kupu cantik berwarna kuning </strong>
-          Kupu-kupu yang memiliki pesan bahwa kami selalu{" "}
-          <i>memiliki progress yang baik dalam setiap proses</i> dan kupu - kupu
-          dikenal sebagai hewan yang mampu menjadi penstabil ekosistim alam
-          dengan sifat <i>simbiosis mutualisme</i>, sedangkan warna kuning
-          adalah warna kejayaan dan kesuksesan.
-          <br />
-          <br />
-          Kami siap membantu Anda mengatasi berbagai tantangan dalam pemasaran
-          produk Anda.
+          Kami, Jasa Inti Solusi Sukses, adalah startup marketing agency yang
+          menyediakan solusi lengkap untuk memenuhi kebutuhan pemasaran produk
+          Anda. 
+		  <br/>
+		  <br/>
+		  Dengan logo heksagonal berbentuk rumah lebah dan simbol
+          kupu-kupu kuning, kami hadir sebagai mitra yang melengkapi, bukan
+          pesaing, untuk membantu mewujudkan kesuksesan usaha Anda. Dalam
+          mengatasi berbagai tantangan dalam pemasaran produk.
+		  <br/>
+		  <br/>
+		  kami selalu
+          berusaha untuk mencapai progress yang baik dan mengedepankan
+          nilai-nilai simbiosis mutualisme, sebagaimana kupu-kupu menjadi
+          penstabil ekosistem alam. Dengan dedikasi kami, kami siap membantu
+          Anda mencapai kejayaan dan kesuksesan dalam dunia pemasaran.
         </p>
 
-          <RunningText />
+        <RunningText />
 
         <div className="flex-center gap-6 max-sm:flex-col w-full justify-center mt-10 md:px-[8.6875rem] px-4">
           <Button1 title="Lihat Layanan" href="/layanan" />
