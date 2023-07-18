@@ -43,8 +43,8 @@ const Mitra = ({ mitra }) => {
     deskripsi,
     brosur,
     infoDetail,
-    linkText,
-    infoPentingRefrensi,
+    judulLink,
+   fileRefrensi,
     urlFormulir,
   } = mitra.fields;
   return (
@@ -68,18 +68,18 @@ const Mitra = ({ mitra }) => {
               <LinkComp url={urlFormulir} title="Isi Formulir Disini" />
             </div>
           )}
-          <h2 className="h2 mb-6">{linkText}</h2>
+          <h2 className="h2 mb-2">{judulLink}</h2>
           <p className="md:text-[32px] text-primary text-[15px]">
             {judulProduk}
           </p>
-          <div>
+          <div className="my-6">
             <div className="lg:float-right lg:ml-4 max-lg:my-4 max-md:w-full">
               <Image
                 src={`https:${gambarIlustrasi.fields.file.url}`}
                 alt="ilustrasi"
                 width={500}
                 height={600}
-                className="rounded-lg shadow-lg max-md:w-full"
+                className="rounded-md shadow-lg max-md:w-full"
               />
             </div>
             <p className="text-justify p">{deskripsi}</p>
@@ -105,14 +105,16 @@ const Mitra = ({ mitra }) => {
 
           <div>
             <h2 className="h2 capitalize mb-6">Informasi & Dokumen Penting</h2>
-            {infoPentingRefrensi.map((item, i) => {
+            {fileRefrensi.map((item, i) => {
               const {
-                fileRefrensi,
+                file,
+				judulFileRefrensi
               } = item.fields;
               return (
                 <div key={i}>
+				<h3 className="text-xl md:text-3xl font-semibold mb-4 text-primary">{judulFileRefrensi}</h3>
                   {fileRefrensi ? (
-                    <AllPages pdf={fileRefrensi.fields.file.url} />
+                    <AllPages pdf={file.fields.file.url} />
                   ) : null}
                 </div>
               );

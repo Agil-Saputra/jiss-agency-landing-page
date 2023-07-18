@@ -1,6 +1,6 @@
 import Card from "./card";
 
-export default function services({ data }) {
+export default function services({ dataLayanan }) {
   return (
     <section id="layanan" className="md:mb-16 mb-10 mt-10">
       <div className="my-10">
@@ -11,7 +11,7 @@ export default function services({ data }) {
         </p>
       </div>
       <div className="flex justify-center max-md:flex-col mt-[3.75rem] gap-6 max-md:px-2">
-        {data.map((layanan, i) => {
+        {dataLayanan.map((layanan, i) => {
 			const {judulLayanan, deskripsiLayanan, ilustrasiLayanan} = layanan.fields
           return (
             <Card

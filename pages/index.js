@@ -22,6 +22,7 @@ export async function getStaticProps(type) {
   const mitra = await client.getEntries({ content_type: "mitra" });
   const orang = await client.getEntries({ content_type: "orang" });
   const redaksi = await client.getEntries({ content_type: "redaksi" });
+  const mediaSatpam = await client.getEntries({ content_type: "mediaSatpam" });
   // passing props for each content-model response
   return {
     props: {
@@ -29,11 +30,12 @@ export async function getStaticProps(type) {
       mitra,
       orang,
       redaksi,
+	  mediaSatpam
     },
   };
 }
 
-export default function Home({ layanan, mitra, orang, redaksi }) {
+export default function Home({ layanan, mitra, orang, redaksi, mediaSatpam }) {
   return (
     <>
       <Head>
@@ -48,11 +50,11 @@ export default function Home({ layanan, mitra, orang, redaksi }) {
       <Navbar>
         <Hero data={redaksi} />
         <main className="main-padding">
-          <Services data={layanan.items} />
-          <Questions data={layanan.items} />
-          <SliderPeople data={orang} />
-		  <Katalog/>
-          <News data={mitra.items} />
+          <Services dataLayanan={layanan.items} />
+          <Questions/>
+          <SliderPeople dataOrang={orang.items} />
+		  <Katalog dataMitra={mitra.items}/>
+          <News dataMedia={mediaSatpam.items}/>
         </main>
       </Navbar>
       <div className="bg-gradientPrimary">

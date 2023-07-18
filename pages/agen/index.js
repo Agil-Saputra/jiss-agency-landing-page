@@ -46,7 +46,7 @@ export default function agen({ agen }) {
           </div>
           <div className="my-10 w-full">
 		  <h2 className="text-3xl font-semibold max-md:text-2xl capitalize my-6">
-             Rekan AJA
+             Rekanan AJA
             </h2>
             {agen.items.map((item, i) => {
               const { nama, whatsapp, slug, fotoAgen, wilayahKabupaten } =

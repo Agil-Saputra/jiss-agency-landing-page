@@ -19,7 +19,7 @@ export default function Navbar({ children }) {
     },
     {
       menu: "Katalog Prodak",
-      path: "/#berita",
+      path: "/#katalog",
     },
     {
       menu: "Company Profile",

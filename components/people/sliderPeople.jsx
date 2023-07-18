@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import { PrevArrow, NextArrow } from '../general/arrows';
 import PeopleCard from './peopleCard';
 
-export default function SliderPeople({data}) {
+export default function SliderPeople({dataOrang}) {
 	const settings = {
 		dots: false,
 		infinite: false,
@@ -35,7 +35,7 @@ export default function SliderPeople({data}) {
 	<section className='my-10'>
 		<h2 className='h2'>Struktur Organisasi</h2>
 		<Slider {...settings}>
-		{data.items.map(item => {
+		{dataOrang.map(item => {
 			const {nama, jabatan, fotoProfile} = item.fields
 			return (
 				<PeopleCard key={nama} name={nama} position={jabatan} imageURL={fotoProfile.fields.file.url}/>

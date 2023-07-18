@@ -24,6 +24,7 @@ module.exports = {
 	  backgroundImage: {
         gradientPrimary: "linear-gradient(-45deg, #333, #FAB100, #FAB000, #333)",
         gradientBlue: "linear-gradient(-45deg, #333, rgba(50, 157, 255, 1), rgba(50, 157, 255, 1), #333)",
+		skeleton : " linear-gradient(90deg, rgba(220, 220, 220, .2), rgba(255, 255, 255, .8), rgba(220, 220, 220, .9), rgba(255, 255, 255, .8))"
       },
     },
   },
