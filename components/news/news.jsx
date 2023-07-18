@@ -26,6 +26,7 @@ export default function News({ dataMedia }) {
                 height={400}
                 src={"https:" + ilustrasiMedia.fields.file.url}
                 className="mt-4 w-full md:h-[300px] object-cover skeleton-bg"
+				alt="ilustrasi media"
               />
             </div>
           );
