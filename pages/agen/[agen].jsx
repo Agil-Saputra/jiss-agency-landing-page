@@ -41,11 +41,12 @@ export default function agen({ agen }) {
     nama,
     alamat,
     fotoAgen,
-    nik,
     umur,
     agama,
     pekerjaan,
     jenisKelamin,
+	nomorRegistrasi,
+	nomorPks,
     wilayahKabupaten,
     wilayahKecamatandesa,
     whatsapp,
@@ -74,12 +75,11 @@ export default function agen({ agen }) {
             height={400}
             alt={nama}
             priority
-            className="rounded-md object-cover w-full"
+            className="rounded-md object-cover w-full lg:sticky top-10"
           />
 
           <div>
             <InfoContainer title="Data Diri">
-              <ContentInfo title="NIK KTP" info={nik} />
               <ContentInfo title="Nama" info={nama} />
               <ContentInfo title="Jenis Kelamin" info={jenisKelamin} />
               <ContentInfo title="Umur" info={umur} />
@@ -87,6 +87,19 @@ export default function agen({ agen }) {
               <ContentInfo title="Alamat" info={alamat} />
               <ContentInfo title="Agama" info={agama} />
             </InfoContainer>
+
+			<InfoContainer title="Info Keagenan"> 
+				<ContentInfo title="Nomor Perjanjian Kerjasama" info={nomorPks}/>
+				<ContentInfo title="Nomor Registrasi" info={nomorRegistrasi}/>
+			</InfoContainer>
+
+			<InfoContainer title="ID Card"> 
+			-
+			</InfoContainer>
+
+			<InfoContainer title="Sertifikat Keagenan"> 
+			-
+			</InfoContainer>
 
             <InfoContainer title="Area Operasional">
               <ContentInfoLink
@@ -100,6 +113,10 @@ export default function agen({ agen }) {
                 link="https://opo.com"
               />
             </InfoContainer>
+
+			<InfoContainer title="Foto Lokasi Agen"> 
+			-
+			</InfoContainer>
 
             <InfoContainer title="Kontak Media">
               <ContactAgent whatsappNumber={whatsapp} ig={linkInstagram} facebookLink={linkFacebook} email={email} web={`/agen/${slug}`}/>

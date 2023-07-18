@@ -18,7 +18,7 @@ export default function AgentCard({
   slug,
 }) {
   return (
-    <div className="p-2 border-[1px] border-black w-fit rounded-md relative">
+    <div className="md:p-4 p-2 border-[1px] border-black w-fit rounded-md relative">
       <Link href={`/agen/${slug}`}>
         <Image
           src={`https:${profilePhoto}`}
@@ -26,7 +26,7 @@ export default function AgentCard({
           height={200}
           alt={slug}
           priority
-          className="max-lg:w-full rounded-md"
+          className="w-full  rounded-md"
         />
       </Link>
       <div className="text-center">
@@ -38,7 +38,7 @@ export default function AgentCard({
           className="font-[600] text-[20px] flex-center gap-2 "
         >
           <Image width={40} height={40} src={whatsapp} alt="icon wa" />
-          {whatsappNumber}
+          +{whatsappNumber}
         </a>
       </div>
     </div>

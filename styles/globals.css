@@ -142,25 +142,10 @@ canvas {
 }
 
 .arrow-right {
-	@apply absolute right-[-15px] md:right-[-35px]
+	@apply absolute right-[-15px] md:right-[-30px]
 }
 
-/* skeleton loader background */
-
-.skeleton-bg {
-	@apply bg-slate-50 relative overflow-hidden
-}
-.skeleton-bg::after {
-	@apply absolute top-0 right-0 translate-x-[-100%] w-full h-full z-10 bg-skeleton content-[''];
-	animation: shimmer 2s infinite;
-  }
-
-  @keyframes shimmer {
-	100% {
-	  transform: translateX(100%);
-	}
-  }
-
+/* special hover */
   .hover-special {
 	background: linear-gradient(#f7ba2b 0 0) var(--p,0)/var(--p,0) no-repeat;
 	transition: .4s,background-position -0s;
