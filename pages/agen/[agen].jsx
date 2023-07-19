@@ -7,6 +7,8 @@ import InfoContainer from "@/components/general/infoContainer";
 import ContentInfo from "@/components/agent/contentInfo";
 import ContentInfoLink from "@/components/agent/contentInfoLink";
 import ContactAgent from "@/components/agent/contactAgent";
+
+import { BsDownload } from "react-icons/bs";
 export async function getStaticPaths() {
   const product = await client.getEntries({
     content_type: "agen",
@@ -45,15 +47,16 @@ export default function agen({ agen }) {
     agama,
     pekerjaan,
     jenisKelamin,
-	nomorRegistrasi,
-	nomorPks,
+    nomorRegistrasi,
+    nomorPks,
     wilayahKabupaten,
     wilayahKecamatandesa,
     whatsapp,
     linkInstagram,
     linkFacebook,
-	email,
+    email,
     slug,
+    fotoLokasiAgen,
   } = agen.fields;
 
   return (
@@ -75,7 +78,7 @@ export default function agen({ agen }) {
             height={400}
             alt={nama}
             priority
-            className="rounded-md object-cover w-full lg:sticky top-10"
+            className="rounded-md object-cover w-full lg:sticky top-16 p-4 border-2 md:w-[600px] "
           />
 
           <div>
@@ -88,18 +91,17 @@ export default function agen({ agen }) {
               <ContentInfo title="Agama" info={agama} />
             </InfoContainer>
 
-			<InfoContainer title="Info Keagenan"> 
-				<ContentInfo title="Nomor Perjanjian Kerjasama" info={nomorPks}/>
-				<ContentInfo title="Nomor Registrasi" info={nomorRegistrasi}/>
-			</InfoContainer>
+            <InfoContainer title="Info Keagenan">
+              <ContentInfo title="Nomor Perjanjian Kerjasama" info={nomorPks} />
+              <ContentInfo title="Nomor Registrasi" info={nomorRegistrasi} />
+            </InfoContainer>
 
-			<InfoContainer title="ID Card"> 
-			-
-			</InfoContainer>
-
-			<InfoContainer title="Sertifikat Keagenan"> 
-			-
-			</InfoContainer>
+            <InfoContainer title="Sertifikat Keagenan">
+              <a href={''} download className="flex border-2 border-primary text-primary px-3 py-1 rounded-md items-center justify-between gap-4">
+                Download Sertifikat
+                <BsDownload />
+              </a>
+            </InfoContainer>
 
             <InfoContainer title="Area Operasional">
               <ContentInfoLink
@@ -114,12 +116,30 @@ export default function agen({ agen }) {
               />
             </InfoContainer>
 
-			<InfoContainer title="Foto Lokasi Agen"> 
-			-
-			</InfoContainer>
+            <InfoContainer title="Foto Lokasi Agen">
+              {fotoLokasiAgen.map((item, i) => {
+                item.fields;
+                return (
+                  <Image
+                    key={i}
+                    src={"https:" + item.fields.file.url}
+                    width={400}
+                    height={400}
+                    alt={item.fields.title}
+					className="w-full mb-4 rounded-sm "
+                  />
+                );
+              })}
+            </InfoContainer>
 
             <InfoContainer title="Kontak Media">
-              <ContactAgent whatsappNumber={whatsapp} ig={linkInstagram} facebookLink={linkFacebook} email={email} web={`/agen/${slug}`}/>
+              <ContactAgent
+                whatsappNumber={whatsapp}
+                ig={linkInstagram}
+                facebookLink={linkFacebook}
+                email={email}
+                web={`/agen/${slug}`}
+              />
             </InfoContainer>
           </div>
         </div>
