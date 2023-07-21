@@ -33,6 +33,10 @@ export default function Navbar({ children }) {
       menu: "Agen JISS Agency",
       path: "/agen",
     },
+	{
+		menu: "Sponsorship JISS",
+		path: "/#contact",
+	  },
     {
       menu: "Kontak",
       path: "/#contact",
@@ -83,7 +87,7 @@ export default function Navbar({ children }) {
             <Link
               href={item.path}
               scroll={false}
-              className="hover:text-slate-400 smooth text-[18px] max-lg:w-full max-lg:px-6 max-lg:py-2 font-[400]"
+              className="hover:text-slate-400 smooth text-[14.5px] max-lg:w-full max-lg:px-6 max-lg:py-2 font-[400]"
               key={i}
             >
               {item.menu}

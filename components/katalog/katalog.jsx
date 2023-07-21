@@ -15,7 +15,7 @@ export default function Katalog({ dataMitra }) {
     <div id="katalog" className="mb-10">
       <h2 className="h2 mb-6">Katalog Produk</h2>
       <h3 className="text-xl md:text-3xl font-semibold">
-        PUSAT PENDIDIKAN & PELATIHAN DASAR SATUAN PENGAMANAN
+        PUSAT PENDIDIKAN & PELATIHAN SATUAN PENGAMANAN
       </h3>
       <p className="text-xl mb-3 md:text-2xl font-semibold mt-6">
         Kualifikasi :{" "}

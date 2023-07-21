@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/layout/navigation/navbar";
 import Image from "next/image";
@@ -97,7 +97,11 @@ export default function agen({ agen }) {
             </InfoContainer>
 
             <InfoContainer title="Sertifikat Keagenan">
-              <a href={''} download className="flex border-2 border-primary text-primary px-3 py-1 rounded-md items-center justify-between gap-4">
+              <a
+                href={""}
+                download
+                className="flex border-2 border-primary text-primary px-3 py-1 rounded-md items-center justify-between gap-4"
+              >
                 Download Sertifikat
                 <BsDownload />
               </a>
@@ -126,7 +130,7 @@ export default function agen({ agen }) {
                     width={400}
                     height={400}
                     alt={item.fields.title}
-					className="w-full mb-4 rounded-sm "
+                    className="w-full mb-4 rounded-sm "
                   />
                 );
               })}

@@ -38,14 +38,16 @@ export async function getStaticProps({ params }) {
 }
 const Mitra = ({ mitra }) => {
   const {
+    namaMitra,
     judulProduk,
     gambarIlustrasi,
     deskripsi,
-    brosur,
     infoDetail,
     judulLink,
-   fileRefrensi,
+    fileRefrensi,
     urlFormulir,
+    lokasiPendidikan,
+	embedHtmlLokasi
   } = mitra.fields;
   return (
     <>
@@ -92,7 +94,7 @@ const Mitra = ({ mitra }) => {
               return (
                 <InfoContainer key={i} title={judulInfo}>
                   {infoDetail.map((info, i) => (
-                    <li key={i}> {info}</li>
+                    <p key={i}>• {info}</p>
                   ))}
                 </InfoContainer>
               );
@@ -104,34 +106,35 @@ const Mitra = ({ mitra }) => {
           </div>
 
           <div>
-            <h2 className="h2 capitalize mb-6">Informasi & Dokumen Penting</h2>
-            {fileRefrensi.map((item, i) => {
-              const {
-                file,
-				judulFileRefrensi
-              } = item.fields;
-              return (
-                <div key={i}>
-				<h3 className="text-xl md:text-3xl font-semibold mb-4 text-primary">{judulFileRefrensi}</h3>
-                  {fileRefrensi ? (
-                    <AllPages pdf={file.fields.file.url} />
-                  ) : null}
-                </div>
-              );
-            })}
+            <h2 className="h2 capitalize mb-6 mt-4">Lokasi Pendidikan</h2>
+            <p>Bertempat di PUSDIKLAT SATPAM {namaMitra}.</p>
+            <p className="text-primary">{lokasiPendidikan}</p>
+			<iframe src={embedHtmlLokasi} width="400" height="300" className="w-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div>
-            <h2 className="h2 capitalize mb-6 mt-4">Brosur</h2>
-            <div className="flex flex-wrap gap-4">
-              <Image
-                src={`https:${brosur.fields.file.url}`}
-                alt="brosur"
-                width={400}
-                height={400}
-              />
+          {fileRefrensi && (
+            <div className="mt-10">
+              <h2 className="h2 capitalize mb-6">
+                Informasi & Dokumen Penting
+              </h2>
+              {fileRefrensi.map((item, i) => {
+                const { file, judulFileRefrensi } = item.fields;
+                return (
+                  <div key={i}>
+                    <h3 className="text-xl md:text-3xl font-semibold mb-4 text-primary">
+                      {judulFileRefrensi}
+                    </h3>
+                    {fileRefrensi ? (
+                      <iframe
+                        src={"https:" + file.fields.file.url}
+                        className="w-full h-[700px]"
+                      />
+                    ) : null}
+                  </div>
+                );
+              })}
             </div>
-          </div>
+          )}
         </div>
       </Navbar>
     </>

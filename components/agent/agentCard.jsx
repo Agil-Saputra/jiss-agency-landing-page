@@ -40,6 +40,7 @@ export default function AgentCard({
           <Image width={40} height={40} src={whatsapp} alt="icon wa" />
           +{whatsappNumber}
         </a>
+
       </div>
     </div>
   );
