@@ -42,42 +42,40 @@ export default function index({ mitra }) {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6">
-			{mitra.items.map((item) => {
-			  const { slug, judul, logoMitra } = item.fields;
-			  return (
-				<Link
-				  key={slug}
-				  href={`/mitra/${slug}`}
-				  className="grid place-items-center border-2 max-lg:w-full p-2 rounded-lg cursor-pointer hover:bg-slate-200 w-full text-center"
-				>
-				  <Image
-					src={`https:${logoMitra.fields.file.url}`}
-					alt="smsb"
-					width={200}
-					height={200}
-				  />
-				  <p className="capitalize p">{judul}</p>
-				</Link>
-			  );
-			})}
-		  </div>
+            {mitra.items.map((item) => {
+              const { slug, judul, logoMitra } = item.fields;
+              return (
+                <Link
+                  key={slug}
+                  href={`/mitra/${slug}`}
+                  className="grid place-items-center border-2 max-lg:w-full p-2 rounded-lg cursor-pointer hover:bg-slate-200 w-full text-center"
+                >
+                  <Image
+                    src={`https:${logoMitra.fields.file.url}`}
+                    alt="smsb"
+                    width={200}
+                    height={200}
+                  />
+                  <p className="capitalize p">{judul}</p>
+                </Link>
+              );
+            })}
+          </div>
 
           <h2 className="h2 mt-5 mb-4">Piagam Kerjasama</h2>
           <div className="w-full flex max-md:flex-col gap-6">
-            <Image
-              src={smsb}
-              width={400}
-              height={400}
-              className="w-full h-auto border-2 skeleton-bg"
-              alt="piagam kerjasama smsb"
-            />
-            <Image
-              src={pataka}
-              width={400}
-              height={400}
-              className="w-full h-auto border-2 skeleton-bg"
-              alt="piagam kerjasama pataka"
-            />
+            {mitra.items.map((item) => {
+              const { piagamKerjasama } = item.fields;
+              return (
+                <Image
+                  src={"https:" + piagamKerjasama.fields.file.url}
+                  width={400}
+                  height={500}
+                  className="w-full h-auto border-2 bg-slate-100"
+                  alt="piagam kerjasama smsb"
+                />
+              );
+            })}
           </div>
         </div>
       </Navbar>
