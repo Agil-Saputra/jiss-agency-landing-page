@@ -65,9 +65,10 @@ export default function index({ mitra }) {
           <h2 className="h2 mt-5 mb-4">Piagam Kerjasama</h2>
           <div className="w-full flex max-md:flex-col gap-6">
             {mitra.items.map((item) => {
-              const { piagamKerjasama } = item.fields;
+              const { piagamKerjasama, slug } = item.fields;
               return (
                 <Image
+                  key={slug}
                   src={"https:" + piagamKerjasama.fields.file.url}
                   width={400}
                   height={500}
