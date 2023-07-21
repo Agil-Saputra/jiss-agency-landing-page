@@ -81,7 +81,7 @@ const Mitra = ({ mitra }) => {
                 alt="ilustrasi"
                 width={500}
                 height={600}
-                className="rounded-md max-w-[300px] max-h-auto md:ml-4 shadow-lg max-md:w-full"
+                className="rounded-md w-[300px] max-h-auto md:ml-4 shadow-lg max-md:w-full"
               />
             </div>
             <p className="text-justify p">{deskripsi}</p>
