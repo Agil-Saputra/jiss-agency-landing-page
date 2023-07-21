@@ -106,9 +106,9 @@ const Mitra = ({ mitra }) => {
           </div>
 
           <div>
-            <h2 className="h2 capitalize mb-6 mt-4">Lokasi Pendidikan</h2>
-            <p>Bertempat di PUSDIKLAT SATPAM {namaMitra}.</p>
-            <p className="text-primary">{lokasiPendidikan}</p>
+            <h2 className="h2 capitalize my-4">Lokasi Pendidikan</h2>
+            <p className="text-xl md:text-2xl font-semibold">Bertempat di PUSDIKLAT SATPAM {namaMitra}.</p>
+            <p className="text-primary text-lg md:text-2xl mb-6">{lokasiPendidikan}</p>
 			<iframe src={embedHtmlLokasi} width="400" height="300" className="w-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
