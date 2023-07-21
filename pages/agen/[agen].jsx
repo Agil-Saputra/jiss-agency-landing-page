@@ -57,6 +57,7 @@ export default function agen({ agen }) {
     email,
     slug,
     fotoLokasiAgen,
+	sertifikatAgen
   } = agen.fields;
 
   return (
@@ -98,7 +99,7 @@ export default function agen({ agen }) {
 
             <InfoContainer title="Sertifikat Keagenan">
               <a
-                href={""}
+                href={"https:" + sertifikatAgen.fields.file.url}
                 download
                 className="flex border-2 border-primary text-primary px-3 py-1 rounded-md items-center justify-between gap-4"
               >
