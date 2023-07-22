@@ -32,7 +32,7 @@ export default function SliderPeople({dataOrang}) {
 		],
 	  };
   return (
-	<section className='my-10'>
+	<section className='my-16'>
 		<h2 className='h2'>Struktur Organisasi</h2>
 		<Slider {...settings}>
 		{dataOrang.map(item => {

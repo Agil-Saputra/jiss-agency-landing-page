@@ -39,7 +39,7 @@ const Questions = () => {
   };
 
   return (
-    <section>
+    <section className="mb-16">
       <h2 className=" h2">Mengapa Memilih Kami</h2>
       <p className="p">
       Kepastian Aman dan Kenyamanan Tertinggi serta Jaminan Terwujudnya Kondisi yang Sangat Mendukung Tanpa Tawar-Menawar, Demi Kemajuan Iklim Investasi yang Luar Biasa, Jasa inti Solusi Sukses Mempersembahkan Solusi Terbaik.

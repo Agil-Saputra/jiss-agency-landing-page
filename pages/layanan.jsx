@@ -46,6 +46,7 @@ export default function layanan({ layanan }) {
 					 priority={true}
 					 alt="icons"
 					 src={`https:${ilustrasiLayanan.fields.file.url}`}
+					 className="w-full h-full"
 				   />
 				   <h3 className="md:text-[2rem] font-[500] my-8 text-[1.5rem] max-md:underline ">
 					 {judulLayanan}
