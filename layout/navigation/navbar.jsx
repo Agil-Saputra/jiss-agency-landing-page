@@ -35,7 +35,7 @@ export default function Navbar({ children }) {
     },
 	{
 		menu: "Sponsorship JISS",
-		path: "/#contact",
+		path: "/sponsorship",
 	  },
     {
       menu: "Kontak",
@@ -61,7 +61,7 @@ export default function Navbar({ children }) {
 
   return (
     <>
-      <header className="flex items-center gap-8 justify-between z-50 md:mt-5  sticky top-0 bg-gradientBlue md:px-[8.6875rem] px-4 text-white">
+      <header className="flex items-center gap-8 justify-between z-50 md:mt-5  sticky top-0 bg-gradientBlue md:px-10 lg:px-[8.6875rem] px-4 text-white">
         <Link href='/' className="flex items-center gap-2">
           <Image
             src={jissLogo}

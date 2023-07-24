@@ -33,7 +33,7 @@ export default function Katalog({ dataMitra }) {
 				className=" w-full bg-slate-200"
               />
               <p
-                className="md:min-w-[400px] text-lg md:text-2xl underline text-primary border-primary border-[1px] py-1 px-2 flex items-center gap-2 justify-between rounded-sm group-hover:bg-gradientPrimary group-hover:text-white smooth"
+                className="lg:min-w-[400px] text-lg md:text-2xl underline text-primary border-primary border-[1px] py-1 px-2 flex items-center gap-2 justify-between rounded-sm group-hover:bg-gradientPrimary group-hover:text-white smooth"
               >
                 {judulLink}
                 <BsBoxArrowUpRight />

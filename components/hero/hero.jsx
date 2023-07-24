@@ -16,17 +16,17 @@ export default function hero({ data }) {
       <div>
         <div className="mt-16">
           <h1
-            className={`h1 my-6 md:max-w-[35ch] text-white md:px-[8.6875rem] px-4 ${carterOne.className}`}
+            className={`h1 my-6 md:max-w-[35ch] text-white md:px-10 lg:px-[8.6875rem] px-4 ${carterOne.className}`}
           >
             Hai !, Selamat Datang Di Pusat Informasi JISS Agency
           </h1>
-          <h2 className={`h2 font-bold text-primary md:px-[8.6875rem] px-4 ${carterOne.className}`}>
+          <h2 className={`h2 font-bold text-primary md:px-10 lg:px-[8.6875rem] px-4 ${carterOne.className}`}>
             {" "}
             &ldquo;Bergabung Bertumbuh Bersama&ldquo;
           </h2>
           <VideoBackground videoSrc={video} />
         </div>
-        <p className="mb-8 md:mt-[8rem] mt-[2rem] py-6 p lg:text-left text-justify md:px-[8.6875rem] px-4 bg-white">
+        <p className="mb-8 md:mt-[8rem] mt-[2rem] py-6 p lg:text-left text-justify md:px-10 lg:px-[8.6875rem] px-4 bg-white">
           Kami, Jasa Inti Solusi Sukses, adalah startup marketing agency yang
           menyediakan solusi lengkap untuk memenuhi kebutuhan pemasaran produk
           Anda.
@@ -47,15 +47,6 @@ export default function hero({ data }) {
         <div className={`${carterOne.className}`}>
 			<RunningText />
 		</div>
-
-        {/* <div className="flex-center gap-6 max-sm:flex-col w-full justify-center mt-10 md:px-[8.6875rem] px-4">
-          <Button1 title="Lihat Layanan" href="/layanan" />
-          <Button2
-            title="Company Profile "
-            href="/company-profile"
-            style="border-primary"
-          />
-        </div> */}
       </div>
     </section>
   );

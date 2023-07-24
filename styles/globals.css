@@ -14,7 +14,7 @@ canvas {
 }
 
 .main-padding {
-	@apply md:px-[8.6875rem] px-4 mt-10
+	@apply md:px-10 lg:px-[8.6875rem] px-4 mt-10
 }
 
 .smooth {
